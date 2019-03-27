@@ -409,12 +409,12 @@ footer {
     }
 
     .hamburger {
-        font-size: 2.5em;
-        padding: 0;
-        margin-right: 20px;
-        cursor: pointer;
         display: flex;
         float: right;
+        font-size: 2.5em;
+        padding: 0;
+        margin-right: 15px;
+        cursor: pointer;
     }
 
     .grid {
