@@ -11,6 +11,9 @@ var conNav = document.getElementById("conBtn");
 var portfolio = document.getElementById("portfolio");
 var about = document.getElementById("about");
 var contact = document.getElementById("contact");
+var hamburger = document.getElementById("hamburger");
+var mobileCloseBtn = document.getElementById("mobileCloseBtn");
+var mySidenav = document.getElementById("mySidenav");
 
 function closeHome() {
     home.style.height = "0";
@@ -24,6 +27,7 @@ function closeHome() {
 }
 
 function openHome() {
+	closeNav();
     home.style.height = "100vh";
     home.style.visibility = "visible";
     portfolioBtn.style.display = "inline";
@@ -45,19 +49,31 @@ function removePage(){
 }
 
 function openPort() {
-    removePage();
+	closeNav();
+		removePage();
     portNav.classList.add("active");
     portfolio.style.display = "inline";
 }
 function openAbout() {
-    removePage();
+	closeNav();
+		removePage();
     aboutNav.classList.add("active");
     about.style.display = "inline";
 }
 function openCon() {
+	closeNav();
     removePage();
     conNav.classList.add("active");
     contact.style.display = "inline";
+}
+
+//Mobile Navigation
+function openNav() {
+	mySidenav.style.width = "100%";
+}
+			
+function closeNav() {
+	mySidenav.style.width = "0";
 }
 
 portfolioBtn.addEventListener("click", closeHome);
@@ -66,8 +82,8 @@ homeNav.addEventListener("click", openHome);
 portNav.addEventListener("click", openPort);
 aboutNav.addEventListener("click", openAbout);
 conNav.addEventListener("click", openCon);
-
-
+hamburger.addEventListener("click", openNav);
+mobileCloseBtn.addEventListener("click", closeNav);
 
 
 

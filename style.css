@@ -14,8 +14,8 @@ body {
     align-items: center;
     text-align: center;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     transition: 1s;
     z-index: 10;
     /*display: none;*/
@@ -65,24 +65,10 @@ body {
 
 /***********************Container**************************/
 .container {
-    width: 100%;
-    height: 100vh;
     margin: auto;
-    bottom: 0;
     display: none;
 }
 
-.pages {
-    height: 80vh;
-    width: 1200px;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-}
-
-.page {
-    position: absolute;
-}
 /***********************Nav**************************/
 nav {
     min-height: 50px;
@@ -95,6 +81,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    float: right;
 }
 
 nav li {
@@ -116,10 +103,6 @@ nav li:hover {
     width: 1200px;
     height: 100%;
     margin:auto;
-}
-
-.main-nav ul {
-    float: right;
 }
 
 .icon {
@@ -165,14 +148,198 @@ nav li:hover {
     animation-duration: 1s;
 }
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    color: white;
+    overflow-x: hidden;
+    transition: 1s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.strike {
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+  
+.strike:before, .strike:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #fff;
+}
+  
+.strike:before {
+    left: 25%;
+}
+.strike:after {
+    right: 25%;
+    background: #fff;
+    transition: width .25s cubic-bezier(1, 1, 1, 1);
+}
+  
+.strike:hover:before {
+    background: #fff;
+    width: 50%;
+    transition: width .25s cubic-bezier(1, 1, 1, 1);
+}
+  
+.strike:hover:after {
+    background: transparent;
+    width: 50%;
+    transition: 0s;
+}
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.mobile-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-social img {
+    width: 30px;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.mobile-social img:hover {
+    opacity: 0.6;
+}
+
+.hamburger {
+    display: none;
+}
+
 .active {
     background-color: rgb(240, 240, 240);
     font-weight: bold;
 }
 /***********************Portfolio**************************/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.work {
+    padding: 15px;
+}
 
+.skills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.skills div {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    font-size: 0.75em;
+}
+
+.pic a {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+
+.pic a:hover {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.uni-port {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(img/portfolio.JPG);
+}
+
+.uni-iOS {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(img/OandXs.png);
+}
+
+.landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(img/landingpage.jpg);
+}
+
+.wordpress {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(img/wordpress.jpg);
+}
+
+.projPort {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url(img/newPortfolio.jpg);
+}
+
+.pic {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 /***********************About**************************/
 /***********************Contact**************************/
+
+.pages {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.page {
+    text-align: center;
+}
+
+.inner-container {
+    width: 1200px;
+}
+
+.page h1 {
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 35px;
+    border-bottom: 3px solid rgb(200, 200, 200);
+    margin: auto;
+}
+
 /***********************Footer**************************/
 footer {
     border-top: 2px solid gray;
@@ -181,12 +348,12 @@ footer {
     justify-content: center;
     align-items: center;
     color: gray;
-    background-color: rgb(240, 240, 240);
+
 }
 
 .social-footer img {
     width: 30px;
-    padding: 10px;
+    padding: 30px 10px 0 10px;
     opacity: 0.7;
     transition: 0.5s;
 }
@@ -198,4 +365,59 @@ footer {
 
 
 
-@media only screen and (max-width: 1920px) {}
+@media only screen and (max-width: 1200px) {
+
+    .icon {
+        margin: 0 20px;
+    }
+    
+    .icon h1 {
+        font-size: 3em;
+    }
+
+    nav li {
+        padding: 20px;
+        letter-spacing: 3px;
+    }
+
+    .inner-container {
+        width: 85vw;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    
+    
+}
+
+@media only screen and (max-width: 768px) {
+
+    .name {
+        font-size: 4em;
+    }
+    
+    .page-home #subTxt {
+        font-size: 1em;
+    }
+    
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        font-size: 2.5em;
+        padding: 0;
+        margin-right: 20px;
+        cursor: pointer;
+        display: flex;
+        float: right;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
