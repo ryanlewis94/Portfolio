@@ -35,7 +35,7 @@ body {
 
 .page-home #subTxt {
     font-weight: 200;
-    color: rgba(165, 165, 165);
+    color: rgb(165, 165, 165);
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 5px;
