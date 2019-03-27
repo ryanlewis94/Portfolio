@@ -1,3 +1,201 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+/***********************Home**************************/
+.page-home {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/coding.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s;
+    z-index: 10;
+    /*display: none;*/
+}
+
+.name {
+    color: white;
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 20px;
+    margin: 0;
+}
+
+#ryan {
+    animation-duration: 5s;
+}
+
+.page-home #subTxt {
+    font-weight: 200;
+    color: rgba(165, 165, 165);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+
+.page-home #portfolioBtn {
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    border: 2px solid white;
+    border-radius: 2px;
+    padding: 5px 20px;
+    letter-spacing: 2px;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    transition: 1s;
+}
+
+.page-home #portfolioBtn:hover {
+    background-color: white;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/***********************Container**************************/
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    bottom: 0;
+    display: none;
+}
+
+.pages {
+    height: 80vh;
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.page {
+    position: absolute;
+}
+/***********************Nav**************************/
+nav {
+    min-height: 50px;
+    border-bottom: 2px solid gray;
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    display: block;
+    text-align: center;
+    padding: 30px;
+    float: left;
+    letter-spacing: 5px;
+    transition: 0.6s;
+}
+
+nav li:hover {
+    background-color: rgb(240, 240, 240);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main-nav {
+    width: 1200px;
+    height: 100%;
+    margin:auto;
+}
+
+.main-nav ul {
+    float: right;
+}
+
+.icon {
+    display: flex;
+    float: left;
+    margin: 0 30px;
+}
+
+.icon h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 4em;
+    transition: 0.5s;
+}
+
+.R {
+    color: rgb(27, 27, 27);
+}
+
+.L {
+    color: rgb(148, 148, 148);
+}
+
+.icon:hover .R {
+    color: rgb(148, 148, 148);
+}
+
+.icon:hover .L {
+    color: rgb(27, 27, 27);
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+#R {
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+#L {
+    animation-delay: 1s;
+    animation-duration: 1s;
+}
+
+.active {
+    background-color: rgb(240, 240, 240);
+    font-weight: bold;
+}
+/***********************Portfolio**************************/
+
+/***********************About**************************/
+/***********************Contact**************************/
+/***********************Footer**************************/
+footer {
+    border-top: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    background-color: rgb(240, 240, 240);
+}
+
+.social-footer img {
+    width: 30px;
+    padding: 10px;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.social-footer img:hover {
+    opacity: 0.4;
+}
+
+
 
 
 @media only screen and (max-width: 1920px) {}
