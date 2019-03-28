@@ -330,8 +330,8 @@ nav li:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/landingpage.jpg);
 }
 
-.landing>.skills div {
-    margin-bottom: 70px;
+.landing>.skills {
+    margin-top: -70px;
 }
 
 .wordpress {
@@ -342,8 +342,8 @@ nav li:hover {
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(img/newPortfolio.jpg);
 }
 
-.projPort>.skills div {
-    margin-bottom: 70px;
+.projPort>.skills {
+    margin-top: -70px;
 }
 
 .pic {
