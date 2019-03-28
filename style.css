@@ -357,6 +357,7 @@ nav li:hover {
     background-size: cover;
     background-position: center;
 }
+
 /***********************About**************************/
 /***********************Contact**************************/
 .back-img {
@@ -373,10 +374,6 @@ nav li:hover {
     color: white;
     margin: 0;
     padding: 90px 0;
-}
-
-.back-img .underline {
-    display: none;
 }
 
 .page-contact .inner-container {
@@ -465,8 +462,16 @@ footer {
         grid-template-columns: repeat(1, 1fr);
     }
 
+    .landing>.skills {
+        margin-top: -50px;
+    }
+    .projPort>.skills {
+        margin-top: -50px;
+    }
+
     .page h1 {
         letter-spacing: 10px;
         font-size: 2em;
     }
+
 }
