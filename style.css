@@ -402,21 +402,15 @@ nav li:hover {
     align-self: center;
 }
 
+.about-format div {
+    align-self: center;
+}
+
 .about-format ul {
     text-align: right;
     font-size: 1.1em;
     font-weight: bold;
     list-style-type: none;
-    align-self: center;
-}
-
-.about-format h4 {
-    text-align: right;
-    font-size: 1.35em;
-}
-
-.about-format h4:after {
-    content: '\2b9f';
 }
 
 .about-format li {
