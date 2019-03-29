@@ -359,18 +359,93 @@ nav li:hover {
 }
 
 /***********************About**************************/
-/***********************Contact**************************/
-.back-img {
+.page-about .back-img {
     position: absolute;
     width: 100%;
     left: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(img/coding.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/lakevyrnwy.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.back-img h1 {
+.page-about .back-img h1 {
+    color: white;
+    margin: 0;
+    padding: 90px 0;
+}
+
+.page-about .inner-container {
+    margin-top: 300px;
+    letter-spacing: 1px;
+}
+
+.large-text {
+    font-size: 2.75em;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.head-line {
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.about-format {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.about-format p {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    text-align: left;
+    align-self: center;
+}
+
+.about-format ul {
+    text-align: right;
+    font-size: 1.25em;
+    font-weight: bold;
+    list-style-type: none;
+    align-self: center;
+    transition: 1s;
+}
+
+.about-format h4 {
+    text-align: right;
+    font-size: 1.5em;
+}
+
+.about-format h4:after {
+    content: '\2b9f';
+}
+
+.about-format li {
+    padding-bottom: 15px;
+}
+
+.page-about a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.page-about a:hover {
+    text-decoration: underline;
+}
+
+/***********************Contact**************************/
+.page-contact .back-img {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/coding.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.page-contact .back-img h1 {
     color: white;
     margin: 0;
     padding: 90px 0;
@@ -378,6 +453,7 @@ nav li:hover {
 
 .page-contact .inner-container {
     margin-top: 300px;
+    letter-spacing: 1px;
 }
 
 /***********************Footer**************************/
@@ -387,7 +463,7 @@ footer {
     justify-content: center;
     align-items: center;
     color: rgb(185, 185, 185);
-    background-color: rgb(32, 32, 42);
+    background-color: rgb(32, 32, 40);
 }
 
 .social-footer img {
@@ -427,7 +503,23 @@ footer {
 }
 
 @media only screen and (max-width: 992px) {
+
+    .about-format {
+        grid-template-columns: 1fr;
+    }
     
+    .about-format p {
+        grid-column-start: 1;
+        text-align: center;
+    }
+
+    .about-format h4 {
+        text-align: center;
+    }
+
+    .about-format ul {
+        text-align: center;
+    }
     
 }
 
