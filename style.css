@@ -490,6 +490,7 @@ input[type=text], textarea {
     font-family: 'Montserrat', sans-serif;
     margin: 5px 0 35px 0;
     height: 40px;
+    -webkit-border-bottom: 1px solid rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid rgba(0, 0, 0, 0.8);
     transition: .5s;
 }
@@ -500,10 +501,12 @@ textarea {
 
 input[type=text]:focus {
     outline: none !important;
+    -webkit-border-bottom: 3px solid black;
     border-bottom: 3px solid black;
 }
 textarea:focus {
     outline: none !important;
+    -webkit-border-bottom: 3px solid black;
     border-bottom: 3px solid black;
 }
 
@@ -515,6 +518,7 @@ input[type=submit] {
     border: 0;
     font-family: 'Montserrat', sans-serif;
     color: white;
+    -webkit-background-color: rgb(240, 64, 0);
     background-color: rgb(240, 64, 0);
     border-radius: 5px;
 }
