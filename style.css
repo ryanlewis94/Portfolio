@@ -43,7 +43,7 @@ body {
     animation-duration: 3s;
 }
 
-br {
+.br {
     display: none;
 }
 
@@ -388,7 +388,6 @@ nav li:hover {
 
 .head-line {
     font-weight: bold;
-    letter-spacing: 0;
 }
 
 .about-format {
@@ -405,16 +404,15 @@ nav li:hover {
 
 .about-format ul {
     text-align: right;
-    font-size: 1.25em;
+    font-size: 1.1em;
     font-weight: bold;
     list-style-type: none;
     align-self: center;
-    transition: 1s;
 }
 
 .about-format h4 {
     text-align: right;
-    font-size: 1.5em;
+    font-size: 1.35em;
 }
 
 .about-format h4:after {
@@ -454,7 +452,78 @@ nav li:hover {
 .page-contact .inner-container {
     margin-top: 300px;
     letter-spacing: 1px;
+    font-weight: bold;
 }
+
+.contact-icons {
+    width: 20px;
+    opacity: 0.85;
+    margin-bottom: -4px;
+    transition: .5s;
+}
+.contact-icons:hover {
+    width: 25px;
+    opacity: 1;
+    margin-bottom: -7px;
+}
+
+.form {
+    padding: 40px 0 80px 0;
+    text-align: left;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.invisible {
+    opacity: 0;
+}
+
+#nameLbl, #emailLbl, #messageLbl {
+    transition: 1s;
+}
+
+input[type=text], textarea {
+    width: 100%;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 5px 0 35px 0;
+    height: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    transition: .5s;
+}
+
+textarea {
+    height: 80px;
+}
+
+input[type=text]:focus {
+    outline: none !important;
+    border-bottom: 3px solid black;
+}
+textarea:focus {
+    outline: none !important;
+    border-bottom: 3px solid black;
+}
+
+input[type=submit] {
+    width: 100%;
+    font-size: 1.25em;
+    font-weight: bold;
+    padding: 5px 0;
+    border: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: rgb(240, 64, 0);
+    border-radius: 5px;
+}
+
+input[type=submit]:hover {
+    background-color: orangered;
+    cursor: pointer;
+}
+
 
 /***********************Footer**************************/
 footer {
@@ -519,6 +588,7 @@ footer {
 
     .about-format ul {
         text-align: center;
+        margin-left: -40px;
     }
     
 }
@@ -533,7 +603,7 @@ footer {
         font-size: 1em;
     }
 
-    br {
+    .br {
         display: inline;
     }
     

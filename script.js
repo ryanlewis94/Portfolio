@@ -15,6 +15,13 @@ var hamburger = document.getElementById("hamburger");
 var mobileCloseBtn = document.getElementById("mobileCloseBtn");
 var mySidenav = document.getElementById("mySidenav");
 
+var nameTxt = document.getElementById("name");
+var nameLbl = document.getElementById("nameLbl").classList;
+var emailTxt = document.getElementById("email");
+var emailLbl = document.getElementById("emailLbl").classList;
+var messageTxt = document.getElementById("message");
+var messageLbl = document.getElementById("messageLbl").classList;
+
 function closeHome() {
     home.style.height = "0";
     container.style.display = "inline"
@@ -76,6 +83,58 @@ function closeNav() {
 	mySidenav.style.width = "0";
 }
 
+
+
+function visible(label) {
+		label.remove("invisible");
+		label.add("visible");
+}
+function invisible(label) {
+		label.remove("visible");
+		label.add("invisible");
+}
+
+function checkFocus(focus) {
+		if (focus === "focus") {
+			return true;
+		}
+		else if (focus === "unfocus") {
+			return false;
+		}
+}
+function check(field, focus) {
+		if (field === "name") {
+			if (checkFocus(focus)) {
+				var label = nameLbl;
+				visible(label);
+			}
+			else {
+				var label = nameLbl;
+				invisible(label);
+			}
+		}
+		else if (field === "email") {
+			if (checkFocus(focus)) {
+				var label = emailLbl;
+				visible(label);
+			}
+			else {
+				var label = emailLbl;
+				invisible(label);
+			}
+		}
+		else if (field === "message") {
+			if (checkFocus(focus)) {
+				var label = messageLbl;
+				visible(label);
+			}
+			else {
+				var label = messageLbl;
+				invisible(label);
+			}
+		}
+}
+
 portfolioBtn.addEventListener("click", closeHome);
 icon.addEventListener("click", openHome);
 homeNav.addEventListener("click", openHome);
@@ -84,7 +143,12 @@ aboutNav.addEventListener("click", openAbout);
 conNav.addEventListener("click", openCon);
 hamburger.addEventListener("click", openNav);
 mobileCloseBtn.addEventListener("click", closeNav);
-
+nameTxt.addEventListener("focus", function(){check("name","focus")});
+nameTxt.addEventListener("focusout", function(){check("name","unfocus")});
+emailTxt.addEventListener("focus", function(){check("email","focus")});
+emailTxt.addEventListener("focusout", function(){check("email","unfocus")});
+messageTxt.addEventListener("focus", function(){check("message","focus")});
+messageTxt.addEventListener("focusout", function(){check("message","unfocus")});
 
 
 //////////////////header text rotate\\\\\\\\\\\\\\\\\\\\\\\\

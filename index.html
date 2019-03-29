@@ -16,7 +16,7 @@
 				class="txt-rotate"
 			    data-period="2000"
 			    data-rotate='[ "Web", "Software", "iOS", "Android" ]'>
-		   </span><br>
+		   </span><br class="br">
 		   Developer
 		</p>
 		<p id="portfolioBtn" class="animated fadeIn">PORTFOLIO</p>
@@ -137,12 +137,13 @@
 					<div class="underline animated fadeInUp"></div>
 					<div class="about-format">
 						<p>
-							I graduated from the University of South Wales with a Bachelor of Science in Information Systems achieving an upper second class honours. 
+							I graduated from the University of South Wales with a Bachelor of Science in Information Systems achieving an upper second class honours.<br><br>
 							As a child I always enjoyed making things and taking things apart while also gravitating towards technology and computers as I got older. 
 							And ever since saving up the money to build my own PC I’ve always wanted to do something with computers. 
 							But it wasn’t until taking Computing class at A-Level that I realised what I enjoyed was programming and using code to create things. 
-							Since then I have learnt a lot through multiple university projects and investing my spare time into bettering my knowledge of different technologies. 
-							Below are some of the languages and technologies that I have gained a really strong understanding of over the last year or two:
+							Since then I have learnt a lot through multiple university projects and investing my spare time into bettering my knowledge of different technologies.<br><br>
+							(Talk About Hobbies) <br><br>
+							I have included a list some of the languages and technologies that I have gained a really strong understanding of over the last year or two.
 						</p>
 						<div>
 							<h4>Skills</h4>
@@ -159,7 +160,10 @@
 							</ul>
 						</div>
 					</div>
-					<p>If you would like to know more about skills and experience, please don't hesitate to take a look at my <a href="https://drive.google.com/file/d/1ErlOsPYLk_FTetjSk1D_5DwAkavsusy4/view" target="_blank">CV</a>.</p>
+					<p>
+						If you would like to know more about skills and experience, please don't hesitate to take a look at my 
+						<a href="https://drive.google.com/file/d/1ErlOsPYLk_FTetjSk1D_5DwAkavsusy4/view" target="_blank">CV.</a>
+					</p>
 				</div>
 			</div>
 			<!-------------------Contact-------------------->
@@ -168,14 +172,31 @@
 					<h1 class="animated fadeInDown">Contact</h1>
 				</div>
 				<div class="inner-container">
-					<form id="form">
-		
-						<input id="name" type="text" placeholder="NAME">
-						<input id="email" type="text" placeholder="E-MAIL">
-						<textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-						<input id="submit" type="submit" value="GO!">
-				
-			  		</form>
+					<h3 class="large-text">Get in touch</h3>
+					<p>
+						If you have any questions please do not hesitate to contact me below. You can also contact me directly via 
+						<a href="tel:07713960728"><img class="contact-icons" src="img/phone-small.png"></a> 
+						or 
+						<a href="mailto:ryan@ryanlewis.co.uk"><img class="contact-icons" src="img/mail-small.png"></a>
+						.
+					</p>
+					<div class="underline animated fadeInUp"></div>
+					<div class="form">
+						<form  name="Form" action="mailto:ryan@ryanlewis.co.uk" method="post" enctype="text/plain">
+
+							<label id="nameLbl" class="invisible">NAME</label>
+							<input id="name" type="text" placeholder="Name" name="name" required>
+
+							<label id="emailLbl" class="invisible">EMAIL</label>
+							<input id="email" type="text" placeholder="Email" name="email" required>
+
+							<label id="messageLbl" class="invisible">MESSAGE</label>
+							<textarea id="message" type="text" placeholder="Message" name="message" required></textarea>
+
+							<input id="submit" type="submit" value="SEND">
+	
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
