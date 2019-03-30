@@ -240,6 +240,7 @@ nav li:hover {
 
 .hamburger {
     display: none;
+    transition: 1s;
 }
 
 .active {
@@ -542,7 +543,7 @@ footer {
 }
 
 .footer-bar img:hover {
-    opacity: 0.7;
+    opacity: 1;
 }
 
 

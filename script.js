@@ -1,159 +1,41 @@
-var portfolioBtn = document.getElementById("portfolioBtn");
-var home = document.getElementById("home");
-var subTxt = document.getElementById("subTxt");
-var ryan = document.getElementById("ryan");
-var container = document.getElementById("container");
-var icon = document.getElementById("icon");
-var homeNav = document.getElementById("homeBtn");
-var portNav = document.getElementById("portBtn");
-var aboutNav = document.getElementById("aboutBtn");
-var conNav = document.getElementById("conBtn");
-var portfolio = document.getElementById("portfolio");
-var about = document.getElementById("about");
-var contact = document.getElementById("contact");
-var hamburger = document.getElementById("hamburger");
-var mobileCloseBtn = document.getElementById("mobileCloseBtn");
-var mySidenav = document.getElementById("mySidenav");
+/////////////////////////Home Page\\\\\\\\\\\\\\\\\\\\\\\\\
 
-var nameTxt = document.getElementById("name");
-var nameLbl = document.getElementById("nameLbl").classList;
-var emailTxt = document.getElementById("email");
-var emailLbl = document.getElementById("emailLbl").classList;
-var messageTxt = document.getElementById("message");
-var messageLbl = document.getElementById("messageLbl").classList;
+let portfolioBtn = document.getElementById("portfolioBtn");
+let home = document.getElementById("home");
+let subTxt = document.getElementById("subTxt");
+let ryan = document.getElementById("ryan");
+let container = document.getElementById("container");
+let icon = document.getElementById("icon");
 
-function closeHome() {
-    home.style.height = "0";
-    container.style.display = "inline"
-    openPort();
-    setTimeout(function(){
-        portfolioBtn.style.display = "none";
-        subTxt.style.visibility = "hidden";
-        ryan.style.visibility = "hidden";
-    }, 500);
+const closeHome = () => {
+	home.style.height = "0";
+	container.style.display = "inline"
+	openPort();
+	setTimeout(function(){
+			portfolioBtn.style.display = "none";
+			subTxt.style.visibility = "hidden";
+			ryan.style.visibility = "hidden";
+	}, 500);
 }
 
-function openHome() {
-	closeNav();
-    home.style.height = "100vh";
-    home.style.visibility = "visible";
-    portfolioBtn.style.display = "inline";
-    subTxt.style.visibility = "visible";
-    ryan.style.visibility = "visible";
-    setTimeout(function(){
-        container.style.display = "none";
-    }, 1000);
-}
-
-function removePage(){
-    portNav.classList.remove("active");
-    aboutNav.classList.remove("active");
-    conNav.classList.remove("active");
-
-    portfolio.style.display = "none";
-    about.style.display = "none";
-    contact.style.display = "none";
-}
-
-function openPort() {
-	closeNav();
-		removePage();
-    portNav.classList.add("active");
-    portfolio.style.display = "inline";
-}
-function openAbout() {
-	closeNav();
-		removePage();
-    aboutNav.classList.add("active");
-    about.style.display = "inline";
-}
-function openCon() {
-	closeNav();
-    removePage();
-    conNav.classList.add("active");
-    contact.style.display = "inline";
-}
-
-//Mobile Navigation
-function openNav() {
-	mySidenav.style.width = "100%";
-}
-			
-function closeNav() {
-	mySidenav.style.width = "0";
-}
-
-
-
-function visible(label) {
-		label.remove("invisible");
-		label.add("visible");
-}
-function invisible(label) {
-		label.remove("visible");
-		label.add("invisible");
-}
-
-function checkFocus(focus) {
-		if (focus === "focus") {
-			return true;
-		}
-		else if (focus === "unfocus") {
-			return false;
-		}
-}
-function check(field, focus) {
-		if (field === "name") {
-			if (checkFocus(focus)) {
-				var label = nameLbl;
-				visible(label);
-			}
-			else {
-				var label = nameLbl;
-				invisible(label);
-			}
-		}
-		else if (field === "email") {
-			if (checkFocus(focus)) {
-				var label = emailLbl;
-				visible(label);
-			}
-			else {
-				var label = emailLbl;
-				invisible(label);
-			}
-		}
-		else if (field === "message") {
-			if (checkFocus(focus)) {
-				var label = messageLbl;
-				visible(label);
-			}
-			else {
-				var label = messageLbl;
-				invisible(label);
-			}
-		}
+const openHome = () => {
+closeNav();
+	home.style.height = "100vh";
+	home.style.visibility = "visible";
+	portfolioBtn.style.display = "inline";
+	subTxt.style.visibility = "visible";
+	ryan.style.visibility = "visible";
+	setTimeout(function(){
+			container.style.display = "none";
+	}, 1000);
 }
 
 portfolioBtn.addEventListener("click", closeHome);
 icon.addEventListener("click", openHome);
-homeNav.addEventListener("click", openHome);
-portNav.addEventListener("click", openPort);
-aboutNav.addEventListener("click", openAbout);
-conNav.addEventListener("click", openCon);
-hamburger.addEventListener("click", openNav);
-mobileCloseBtn.addEventListener("click", closeNav);
-nameTxt.addEventListener("focus", function(){check("name","focus")});
-nameTxt.addEventListener("focusout", function(){check("name","unfocus")});
-emailTxt.addEventListener("focus", function(){check("email","focus")});
-emailTxt.addEventListener("focusout", function(){check("email","unfocus")});
-messageTxt.addEventListener("focus", function(){check("message","focus")});
-messageTxt.addEventListener("focusout", function(){check("message","unfocus")});
 
+//header text rotate\\
 
-//////////////////header text rotate\\\\\\\\\\\\\\\\\\\\\\\\
-
-var TxtRotate = function(el, toRotate, period) {
+let TxtRotate = function(el, toRotate, period) {
 	this.toRotate = toRotate;
 	this.el = el;
 	this.loopNum = 0;
@@ -161,11 +43,11 @@ var TxtRotate = function(el, toRotate, period) {
 	this.txt = '';
 	this.tick();
 	this.isDeleting = false;
-  };
+};
   
-  TxtRotate.prototype.tick = function() {
-	var i = this.loopNum % this.toRotate.length;
-	var fullTxt = this.toRotate[i];
+TxtRotate.prototype.tick = function() {
+	let i = this.loopNum % this.toRotate.length;
+	let fullTxt = this.toRotate[i];
   
 	if (this.isDeleting) {
 	  this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -175,8 +57,8 @@ var TxtRotate = function(el, toRotate, period) {
   
 	this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
   
-	var that = this;
-	var delta = 300 - Math.random() * 100;
+	let that = this;
+	let delta = 300 - Math.random() * 100;
   
 	if (this.isDeleting) { delta /= 2; }
   
@@ -192,15 +74,15 @@ var TxtRotate = function(el, toRotate, period) {
 	setTimeout(function() {
 	  that.tick();
 	}, delta);
-  };
+};
   
 
 window.onload = function() {
   setTimeout(function(){
-	var elements = document.getElementsByClassName('txt-rotate');
-	for (var i=0; i<elements.length; i++) {
-	  var toRotate = elements[i].getAttribute('data-rotate');
-	  var period = elements[i].getAttribute('data-period');
+	let elements = document.getElementsByClassName('txt-rotate');
+	for (let i=0; i<elements.length; i++) {
+	  let toRotate = elements[i].getAttribute('data-rotate');
+	  let period = elements[i].getAttribute('data-period');
 	  if (toRotate) {
 		new TxtRotate(elements[i], JSON.parse(toRotate), period);
 	  }
@@ -209,4 +91,122 @@ window.onload = function() {
   }, 3000);
 };
 
-///////////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+/////////////////////////Nav Bar\\\\\\\\\\\\\\\\\\\\\\\\\
+
+let homeNav = document.getElementById("homeBtn");
+let portNav = document.getElementById("portBtn");
+let aboutNav = document.getElementById("aboutBtn");
+let conNav = document.getElementById("conBtn");
+
+let portfolio = document.getElementById("portfolio");
+let about = document.getElementById("about");
+let contact = document.getElementById("contact");
+
+function removePage(){
+	portNav.classList.remove("active");
+	aboutNav.classList.remove("active");
+	conNav.classList.remove("active");
+
+	portfolio.style.display = "none";
+	about.style.display = "none";
+	contact.style.display = "none";
+}
+
+function openPort() {
+	closeNav();
+	removePage();
+	portNav.classList.add("active");
+	portfolio.style.display = "inline";
+}
+function openAbout() {
+	closeNav();
+	removePage();
+	aboutNav.classList.add("active");
+	about.style.display = "inline";
+}
+function openCon() {
+	closeNav();
+	removePage();
+	conNav.classList.add("active");
+	contact.style.display = "inline";
+}
+
+homeNav.addEventListener("click", openHome);
+portNav.addEventListener("click", openPort);
+aboutNav.addEventListener("click", openAbout);
+conNav.addEventListener("click", openCon);
+
+
+/////////////////////////Mobile Nav\\\\\\\\\\\\\\\\\\\\\\\\\
+
+let hamburger = document.getElementById("hamburger");
+let mobileCloseBtn = document.getElementById("mobileCloseBtn");
+let mySidenav = document.getElementById("mySidenav");
+
+const openNav = () => {
+	mySidenav.style.width = "100%";
+	hamburger.style.opacity = "0";
+}
+			
+const closeNav = () => {
+	mySidenav.style.width = "0";
+	hamburger.style.opacity = "1";
+}
+
+hamburger.addEventListener("click", openNav);
+mobileCloseBtn.addEventListener("click", closeNav);
+
+
+/////////////////////////Form Labels\\\\\\\\\\\\\\\\\\\\\\\\\
+
+let nameTxt = document.getElementById("name");
+let nameLbl = document.getElementById("nameLbl").classList;
+let emailTxt = document.getElementById("email");
+let emailLbl = document.getElementById("emailLbl").classList;
+let messageTxt = document.getElementById("message");
+let messageLbl = document.getElementById("messageLbl").classList;
+
+const visible = (label) => {
+		label.remove("invisible");
+		label.add("visible");
+}
+const invisible = (label) => {
+		label.remove("visible");
+		label.add("invisible");
+}
+
+const checkFocus = (focus, label) => {
+		if (focus === "focus") {
+			visible(label);
+		}
+		else if (focus === "unfocus") {
+			invisible(label);
+		}
+}
+
+const check = (field, focus) => {
+	let label;
+	switch (field) {
+		case "name":
+			label = nameLbl;
+			checkFocus(focus, label);
+			break;
+		case "email":
+			label = emailLbl;
+			checkFocus(focus, label);
+			break;
+		case "message":
+			label = messageLbl;
+			checkFocus(focus, label);
+			break;
+	}
+}
+
+nameTxt.addEventListener("focus", function(){check("name","focus")});
+nameTxt.addEventListener("focusout", function(){check("name","unfocus")});
+emailTxt.addEventListener("focus", function(){check("email","focus")});
+emailTxt.addEventListener("focusout", function(){check("email","unfocus")});
+messageTxt.addEventListener("focus", function(){check("message","focus")});
+messageTxt.addEventListener("focusout", function(){check("message","unfocus")});
+
