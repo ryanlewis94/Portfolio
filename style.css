@@ -411,6 +411,7 @@ nav li:hover {
     text-align: right;
     font-size: 1.1em;
     font-weight: bold;
+    -webkit-list-style-type: none;
     list-style-type: none;
 }
 

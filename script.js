@@ -103,7 +103,7 @@ let portfolio = document.getElementById("portfolio");
 let about = document.getElementById("about");
 let contact = document.getElementById("contact");
 
-function removePage(){
+const removePage = () => {
 	portNav.classList.remove("active");
 	aboutNav.classList.remove("active");
 	conNav.classList.remove("active");
@@ -113,19 +113,19 @@ function removePage(){
 	contact.style.display = "none";
 }
 
-function openPort() {
+const openPort = () => {
 	closeNav();
 	removePage();
 	portNav.classList.add("active");
 	portfolio.style.display = "inline";
 }
-function openAbout() {
+const openAbout = () => {
 	closeNav();
 	removePage();
 	aboutNav.classList.add("active");
 	about.style.display = "inline";
 }
-function openCon() {
+const openCon = () => {
 	closeNav();
 	removePage();
 	conNav.classList.add("active");
