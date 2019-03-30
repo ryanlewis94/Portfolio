@@ -19,7 +19,7 @@ const closeHome = () => {
 }
 
 const openHome = () => {
-closeNav();
+	closeNav();
 	home.style.height = "100vh";
 	home.style.visibility = "visible";
 	portfolioBtn.style.display = "inline";
