@@ -635,4 +635,8 @@ footer {
         font-size: 2em;
     }
 
+    .page p {
+        font-size: .85em;
+    }
+
 }
