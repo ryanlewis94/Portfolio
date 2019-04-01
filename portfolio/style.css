@@ -124,9 +124,8 @@ nav li:hover {
 }
 
 .R {
-	color: rgb(27, 27, 27);
+	color: rgb(32, 32, 40);
 }
-
 .L {
 	color: rgb(148, 148, 148);
 }
@@ -136,7 +135,7 @@ nav li:hover {
 }
 
 .icon:hover .L {
-	color: rgb(27, 27, 27);
+	color: rgb(32, 32, 40);
 }
 
 .icon:hover {
@@ -404,12 +403,10 @@ nav li:hover {
 
 .about-format {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .about-format p {
-	grid-column-start: 2;
-	grid-column-end: 4;
 	text-align: left;
 	align-self: center;
 }
@@ -632,7 +629,7 @@ footer {
 	}
 
 	.grid {
-		grid-template-columns: repeat(1, 1fr);
+		grid-template-columns: 1fr;
 	}
 
 	.landing > .skills {
@@ -649,5 +646,9 @@ footer {
 
 	.page p {
 		font-size: .85em;
+	}
+
+	.about-format {
+		grid-template-columns: 1fr;
 	}
 }
