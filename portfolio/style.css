@@ -362,6 +362,7 @@ nav li:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	box-shadow: 5px 5px 10px 0 rgb(150, 150, 150);
 }
 
 /***********************About**************************/
@@ -377,6 +378,7 @@ nav li:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	box-shadow: 0 0 20px 0 rgb(200, 200, 200);
 }
 
 .page-about .back-img h1 {
@@ -447,6 +449,7 @@ nav li:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	box-shadow: 0 0 20px 0 rgb(200, 200, 200);
 }
 
 .page-contact .back-img h1 {
@@ -545,6 +548,7 @@ footer {
 	align-items: center;
 	color: rgb(185, 185, 185);
 	background-color: rgb(32, 32, 40);
+	box-shadow: 0 0 20px 0 rgb(150, 150, 150);
 }
 
 .social-footer img {
@@ -554,7 +558,7 @@ footer {
 	transition: 0.5s;
 }
 
-.footer-bar img:hover {
+.social-footer img:hover {
 	opacity: 1;
 }
 
