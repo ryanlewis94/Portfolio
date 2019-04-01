@@ -377,7 +377,6 @@ nav li:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	box-shadow: 0 0 20px 0 rgb(200, 200, 200);
 }
 
 .page-about .back-img h1 {
@@ -451,7 +450,6 @@ nav li:hover {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	box-shadow: 0 0 20px 0 rgb(200, 200, 200);
 }
 
 .page-contact .back-img h1 {
