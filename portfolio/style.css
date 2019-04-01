@@ -281,7 +281,7 @@ nav li:hover {
 }
 
 /***********************Portfolio**************************/
-.page-port {
+.page-port p {
 	font-size: 0.85em;
 }
 
@@ -365,6 +365,11 @@ nav li:hover {
 }
 
 /***********************About**************************/
+.page-about p,
+li {
+	font-size: 0.85em;
+}
+
 .page-about .back-img {
 	position: absolute;
 	width: 100%;
