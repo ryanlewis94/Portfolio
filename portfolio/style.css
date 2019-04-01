@@ -424,6 +424,7 @@ nav li:hover {
 	padding: 25px;
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
+	transition: 1s;
 }
 
 .skills-img img:hover {
