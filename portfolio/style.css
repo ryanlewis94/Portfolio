@@ -365,9 +365,8 @@ nav li:hover {
 }
 
 /***********************About**************************/
-.page-about p,
-li {
-	font-size: 0.85em;
+.page-about p {
+	font-size: 0.9em;
 }
 
 .page-about .back-img {
