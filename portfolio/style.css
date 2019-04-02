@@ -424,10 +424,13 @@ nav li:hover {
 	padding: 25px;
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
-	transition: 1s;
+	transition: .65s;
 }
 
 .skills-img img:hover {
+	-ms-transform: scale(1.4, 1.4);
+	-webkit-transform: scale(1.4, 1.4);
+	transform: scale(1.4, 1.4);
 	-webkit-filter: grayscale(0%);
 	filter: grayscale(0%);
 }
@@ -472,9 +475,10 @@ nav li:hover {
 	transition: .5s;
 }
 .contact-icons:hover {
-	width: 25px;
+	-ms-transform: scale(1.4, 1.4);
+	-webkit-transform: scale(1.4, 1.4);
+	transform: scale(1.4, 1.4);
 	opacity: 1;
-	margin-bottom: -7px;
 }
 
 .form {
