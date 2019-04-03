@@ -203,19 +203,20 @@
 						<a href="mailto:ryan@ryanlewis.co.uk"><img class="contact-icons" src="img/mail-small.png" alt="Email Address"></a>
 					</p>
 					<div class="form">
-						<form  name="Form" action="https://formspree.io/ryan@ryanlewis.co.uk" method="POST">
+						<form  name="Form" action="form.php" method="POST">
+							<fieldset>
+								<label id="nameLbl" class="invisible">NAME</label>
+								<input id="name" type="text" placeholder="Name" name="name" required>
 
-							<label id="nameLbl" class="invisible">NAME</label>
-							<input id="name" type="text" placeholder="Name" name="name" required>
+								<label id="emailLbl" class="invisible">EMAIL</label>
+								<input id="email" type="text" placeholder="Email" name="email" required>
 
-							<label id="emailLbl" class="invisible">EMAIL</label>
-							<input id="email" name="_replyto" type="text" placeholder="Email" name="email" required>
+								<label id="messageLbl" class="invisible">MESSAGE</label>
+								<textarea id="message" type="text" placeholder="Message" name="message" required></textarea>
 
-							<label id="messageLbl" class="invisible">MESSAGE</label>
-							<textarea id="message" type="text" placeholder="Message" name="message" required></textarea>
-
-							<input id="submit" type="submit" value="SEND">
-							<input type="hidden" name="_next" value="https://ryanlewis94.github.io/portfolio/">
+								<input id="submit" type="submit" value="SEND">
+								<input type="text" id="website" name="website">
+							</fieldset>
 						</form>
 					</div>
 				</div>
