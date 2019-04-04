@@ -596,7 +596,8 @@ footer {
 	transform: scale(1.1, 1.1);
 }
 
-.imgLoad {
+.imgLoad,
+.imgLoad img {
 	display: none;
 }
 
