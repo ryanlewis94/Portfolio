@@ -10,7 +10,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="favicon.png">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link rel="stylesheet" type="text/css" href="./animate.css">
 </head>
@@ -205,7 +204,7 @@
 						<a href="mailto:ryan@ryanlewis.co.uk"><img class="contact-icons" src="img/mail-small.png" alt="Email Address"></a>
 					</p>
 					<div class="form">
-						<form  name="Form" action="form.php" method="POST">
+						<form  id="ajax-contact" name="Form" action="form.php" method="POST">
 							<fieldset>
 								<label id="nameLbl" class="invisible">NAME</label>
 								<input id="name" type="text" placeholder="Name" name="name" required>
@@ -221,6 +220,8 @@
 							</fieldset>
 						</form>
 					</div>
+					<div id="form-messages"></div>
+					<p id="new-msg">Send a new message</p>
 				</div>
 			</div>
 		</div>
@@ -235,7 +236,9 @@
 		</footer>
 	</div>
 
-	<script type="text/javascript" src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	
 </body>
 </html>

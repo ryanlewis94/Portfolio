@@ -32,11 +32,11 @@ else{
 }
 if (strlen($success) < 1) {
     $success = "Message failed! Please make sure all fields are filled out properly.";
-    //echo($success);
-    header("Location:success.php?Success=$success");
+    echo($success);
+    //header("Location:success.php?Success=$success");
 }
 else {
-    //echo($success);
-    header("Location:success.php?Success=$success");
+    $Success = str_replace('0', '', $Success);
+    echo($success);
 }
 ?>
