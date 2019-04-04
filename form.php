@@ -19,7 +19,7 @@ else{
             
                         echo($to + $from + $message + $headers);
                         mail($to, $from, $message, $headers);  
-                        $success = "Thanks for your message, I will be in touch soon!";
+                        $success = "Thanks for your message $name, I will be in touch soon!";
                     }
                     else {
                         $success = "Message failed! Please don't forget the @";
