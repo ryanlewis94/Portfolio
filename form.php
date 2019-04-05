@@ -17,7 +17,6 @@ else{
                         $headers = "Reply to: $email";
                         $message = "Message: $comments"; 
             
-                        //echo($to + $from + $message + $headers);
                         mail($to, $from, $message, $headers);  
                         $success = "Thanks for your message $name, I will be in touch soon!";
                     }
@@ -33,7 +32,6 @@ else{
 if (strlen($success) < 1) {
     $success = "Message failed! Please make sure all fields are filled out properly.";
     echo($success);
-    //header("Location:success.php?Success=$success");
 }
 else {
     echo($success);

@@ -339,6 +339,7 @@ nav li:hover {
 	-webkit-transform: scale(1.075, 1.075);
 	transform: scale(1.075, 1.075);
 }
+
 .uni-port {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/portfolio.JPG);
 }
@@ -348,18 +349,14 @@ nav li:hover {
 .landing {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/landingpage.jpg);
 }
-/* .landing > .skills {
-	margin-top: -70px;
-} */
+
 .wordpress {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/wordpress.JPG);
 }
 .projPort {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/newPortfolio.JPG);
 }
-/* .projPort > .skills {
-	margin-top: -70px;
-} */
+
 .pic {
 	display: flex;
 	flex-flow: column wrap;
@@ -534,6 +531,14 @@ input[type=submit]:hover {
 	background-color: orangered;
 	cursor: pointer;
 }
+input[type=submit]:active {
+	background-color: rgb(240, 64, 0);
+	-ms-transform: scale(1.025, 1.025);
+	-webkit-transform: scale(1.025, 1.025);
+	transform: scale(1.025, 1.025);
+	box-shadow: 5px 5px 10px 0 rgb(90, 90, 90);
+}
+
 fieldset {
 	border: none;
 }
