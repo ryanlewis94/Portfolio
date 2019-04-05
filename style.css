@@ -404,15 +404,16 @@ nav li:hover {
 .head-line {
 	font-weight: bold;
 }
-.about-format {
+.format-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 25px;
 }
-.about-format p {
+.format-grid p {
 	text-align: left;
 	align-self: center;
 }
-.about-format div {
+.format-grid div {
 	align-self: center;
 }
 .skills-img {
@@ -463,10 +464,16 @@ nav li:hover {
 	font-weight: bold;
 }
 .contact-icons {
-	width: 20px;
+	width: 30px;
 	opacity: 0.85;
-	margin-bottom: -4px;
+	margin-bottom: -7px;
 	transition: .5s;
+	border-right: 10px solid white;
+	border-left: 10px solid white;
+}
+.In {
+	width: 26px;
+	margin-bottom: -3px;
 }
 .contact-icons:hover {
 	-ms-transform: scale(1.4, 1.4);
@@ -474,10 +481,24 @@ nav li:hover {
 	transform: scale(1.4, 1.4);
 	opacity: 1;
 }
+
+.page .contact-info {
+	font-size: 1.5em;
+	margin-bottom: 35px;
+	text-align: center;
+}
+
+#map {
+	height: 300px;
+	width: 90%;
+	border-radius: 10px;
+	display: inline-block;
+	text-align: center;
+}
+
 .form {
 	padding: 35px 0 0 0;
 	text-align: left;
-	display: inline;
 }
 .visible {
 	opacity: 1;
@@ -631,20 +652,17 @@ footer {
 	}
 }
 @media only screen and (max-width: 992px) {
-	.about-format {
+	.format-grid {
 		grid-template-columns: 1fr;
 	}
-	.about-format p {
+	.format-grid p {
 		grid-column-start: 1;
 		text-align: center;
 	}
-	.about-format h4 {
-		text-align: center;
+	#map {
+		width: 100%;
 	}
-	.about-format ul {
-		text-align: center;
-		margin-left: -40px;
-	}
+
 	.skills-img {
 		display: inline;
 	}
@@ -696,8 +714,12 @@ footer {
 	.page p {
 		font-size: .85em;
 	}
-	.about-format {
+	.format-grid {
 		grid-template-columns: 1fr;
+	}
+	.page .contact-info {
+		font-size: 1.5em;
+		text-align: left;
 	}
 	.skills-img {
 		margin: 0;
@@ -708,18 +730,12 @@ footer {
 		-webkit-filter: grayscale(0%);
 		filter: grayscale(0%);
 	}
-	.page-success {
-		font-size: 0.6em;
-	}
 }
+
 @media only screen and (max-width: 380px) {
 	.skills-img img {
 		width: 65px;
 		padding: 10px;
-	}
-	.success {
-		padding: 4em 0;
-		margin: 30px 0;
 	}
 	#new-msg {
 		font-size: 0.9em;

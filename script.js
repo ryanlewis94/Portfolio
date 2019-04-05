@@ -217,3 +217,7 @@ messageTxt.addEventListener('focus', function() {
 messageTxt.addEventListener('focusout', function() {
 	check('message', 'unfocus');
 });
+
+window.onload = function() {
+	new google.maps.Map(document.getElementById('map'), { zoom: 10, center: { lat: 51.5, lng: -3.2 } });
+};

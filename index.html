@@ -163,7 +163,7 @@
 						Eager to create modern, unique, and intuitive systems.
 					</p>
 					<div class="underline animated fadeInUp"></div>
-					<div class="about-format">
+					<div class="format-grid">
 						<p>
 							I graduated from the University of South Wales with a Bachelor of Science in Information Systems achieving an upper second class honours.<br><br>
 							As a child I always enjoyed making things and taking things apart while also gravitating towards technology and computers as I got older. 
@@ -198,32 +198,48 @@
 				<div class="back-img">
 					<h1 class="animated fadeInDown">Contact</h1>
 				</div>
+				
 				<div class="inner-container">
-					<p>
-						If you have any questions please do not hesitate to contact me below. You can also contact me directly via 
-						<a href="tel:07713960728"><img class="contact-icons" src="img/phone-small.png" alt="Mobile Phone Number"></a> 
-						or 
-						<a href="mailto:ryan@ryanlewis.co.uk"><img class="contact-icons" src="img/mail-small.png" alt="Email Address"></a>
-					</p>
-					<div class="form">
-						<form  id="ajax-contact" name="Form" action="form.php" method="POST">
-							<fieldset>
-								<label id="nameLbl" class="invisible">NAME</label>
-								<input id="name" type="text" placeholder="Name" name="name" required>
+					<!--<h3 class="large-text">Please get in touch!</h3>
+					<div class="underline animated fadeInUp"></div>-->
+					<div class="format-grid">
+						<div>
+							<p class="contact-info">
+								| Mobile:  
+								<a href="tel:07713960728"><img class="contact-icons" src="img/phone-small.png" alt="Mobile Phone Number"></a> 
+								<br class="br">
+								<br class="br">
+								| Email: 
+								<a href="mailto:ryan@ryanlewis.co.uk"><img class="contact-icons" src="img/mail-small.png" alt="Email Address"></a>
+								<br class="br">
+								<br class="br">
+								| LinkedIn:
+								<a href="https://www.linkedin.com/in/ryan-lewis-b02105161/" target="_blank"><img class="contact-icons In" src="img/linked-in-logo-black.png" alt="LinkedIn Profile"></a>
+							</p>
+							<div id="map"></div>
+						</div>
+						<div>
+							<div class="form">
+								<form  id="ajax-contact" name="Form" action="form.php" method="POST">
+									<fieldset>
+										<label id="nameLbl" class="invisible">NAME</label>
+										<input id="name" type="text" placeholder="Name" name="name" required>
 
-								<label id="emailLbl" class="invisible">EMAIL</label>
-								<input id="email" type="text" placeholder="Email" name="email" required>
+										<label id="emailLbl" class="invisible">EMAIL</label>
+										<input id="email" type="text" placeholder="Email" name="email" required>
 
-								<label id="messageLbl" class="invisible">MESSAGE</label>
-								<textarea id="message" type="text" placeholder="Message" name="message" required></textarea>
+										<label id="messageLbl" class="invisible">MESSAGE</label>
+										<textarea id="message" type="text" placeholder="Message" name="message" required></textarea>
 
-								<input id="submit" type="submit" value="SEND">
-								<input type="text" id="website" name="website">
-							</fieldset>
-						</form>
+										<input id="submit" type="submit" value="SEND">
+										<input type="text" id="website" name="website">
+									</fieldset>
+								</form>
+							</div>
+							<div id="form-messages"></div>
+							<p id="new-msg">Send a new message</p>
+						</div>
 					</div>
-					<div id="form-messages"></div>
-					<p id="new-msg">Send a new message</p>
 				</div>
 			</div>
 		</div>
@@ -237,7 +253,9 @@
 			<p>Copyright © 2019 Ryan Lewis</p>
 		</footer>
 	</div>
-
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6tR58YsD5sn8WCIjVhGMvmmDF0bzXZwA&">
+    </script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="script.js"></script>
