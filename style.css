@@ -572,6 +572,11 @@ form #website {
 	display: none;
 }
 
+#form-messages {
+	display: flex;
+	flex-flow: row wrap;
+}
+
 #new-msg {
 	cursor: pointer;
 	padding: 5px 25px;
