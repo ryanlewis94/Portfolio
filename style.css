@@ -703,6 +703,18 @@ footer {
 		font-size: 1em;
 	}
 
+	.page-home #portfolioBtn:hover {
+		-ms-transform: none;
+		-webkit-transform: none;
+		transform: none;
+	}
+
+	.icon:hover {
+		-ms-transform: none;
+		-webkit-transform: none;
+		transform: none;
+	}
+
 	.br {
 		display: inline;
 	}
