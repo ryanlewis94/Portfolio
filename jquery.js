@@ -98,19 +98,14 @@ $(function() {
 						$(formMessages).addClass('error');
 
 						// Set the message text.
-						if (data.responseText !== '') {
-							$(formMessages).text(data.responseText);
-						} else {
-							$(formMessages).text(
-								'Oops! An unknown error has occured and your message could not be sent, Please try again.'
-							);
-							$(name).val('');
-							$(email).val('');
-							$(message).val('');
-							$(name).css('border-bottom', '1px solid black');
-							$(email).css('border-bottom', '1px solid black');
-							$(message).css('border-bottom', '1px solid black');
-						}
+						$(formMessages).text(response);
+
+						$(name).val('');
+						$(email).val('');
+						$(message).val('');
+						$(name).css('border-bottom', '1px solid black');
+						$(email).css('border-bottom', '1px solid black');
+						$(message).css('border-bottom', '1px solid black');
 					}
 				})
 				.fail(function(data) {
