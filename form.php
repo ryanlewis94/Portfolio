@@ -17,14 +17,14 @@ else{
                         $headers = "Reply to: $email";
                         $message = "Message: $comments"; 
             
-                        echo($to + $from + $message + $headers);
+                        //echo($to + $from + $message + $headers);
                         mail($to, $from, $message, $headers);  
                         $success = "Thanks for your message $name, I will be in touch soon!";
                     }
                     else {
-                        $success = "Message failed! Please don't forget the @";
+                        $success = "Message failed! Please enter a valid email address";
                     }
-                } else { $success = "Message failed! Please make your message between 10 and 1000 characters.";}
+                } else { $success = "Message failed! Please make your message is between 10 and 1000 characters.";}
             } else { $success = "Message failed! Enter a valid email address."; }
         } else { $succes = "Message failed! Please enter a name between 2 and 20 characters."; }
     }
@@ -32,11 +32,10 @@ else{
 }
 if (strlen($success) < 1) {
     $success = "Message failed! Please make sure all fields are filled out properly.";
-    //echo($success);
-    header("Location:success.php?Success=$success");
+    echo($success);
+    //header("Location:success.php?Success=$success");
 }
 else {
-    //echo($success);
-    header("Location:success.php?Success=$success");
+    echo($success);
 }
 ?>

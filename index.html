@@ -204,7 +204,7 @@
 						<a href="mailto:ryan@ryanlewis.co.uk"><img class="contact-icons" src="img/mail-small.png" alt="Email Address"></a>
 					</p>
 					<div class="form">
-						<form  name="Form" action="form.php" method="POST">
+						<form  id="ajax-contact" name="Form" action="form.php" method="POST">
 							<fieldset>
 								<label id="nameLbl" class="invisible">NAME</label>
 								<input id="name" type="text" placeholder="Name" name="name" required>
@@ -220,6 +220,8 @@
 							</fieldset>
 						</form>
 					</div>
+					<div id="form-messages"></div>
+					<p id="new-msg">Send a new message</p>
 				</div>
 			</div>
 		</div>
@@ -233,15 +235,10 @@
 			<p>Copyright © 2019 Ryan Lewis</p>
 		</footer>
 	</div>
-	<div class="imgLoad">
-		<img src="img/lakevyrnwy.jpg">
-		<img src="img/portfolio.JPG">
-		<img src="img/OandXs.png">
-		<img src="img/landingpage.jpg">
-		<img src="img/wordpress.JPG">
-		<img src="img/newPortfolio.JPG">
-	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+	
 </body>
 </html>
