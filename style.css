@@ -294,19 +294,28 @@ nav li:hover {
 .grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px;
+	grid-gap: 20px;
 }
 .work {
 	padding: 15px;
 	letter-spacing: 1px;
+	border: 1px solid rgba(58, 58, 71, 0.342);
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px 0 rgb(150, 150, 150);
+	transition: 0.5s;
+	background: rgba(50, 50, 90, 0.125);
 }
-
+.work:hover {
+	-ms-transform: scale(1.025, 1.025);
+	-webkit-transform: scale(1.025, 1.025);
+	transform: scale(1.025, 1.025);
+	box-shadow: 5px 5px 10px 0 rgb(75, 75, 75);
+}
 .skills {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 }
-
 .skills div {
 	background-color: rgba(0, 0, 0, 0.5);
 	color: white;
@@ -315,7 +324,6 @@ nav li:hover {
 	margin: 10px 15px;
 	font-size: 0.75em;
 }
-
 .pic a {
 	text-decoration: none;
 	color: white;
@@ -325,67 +333,54 @@ nav li:hover {
 	background-color: rgba(0, 0, 0, 0.5);
 	transition: 0.5s;
 }
-
 .pic a:hover {
 	background-color: rgba(0, 0, 0, 0.85);
 	-ms-transform: scale(1.075, 1.075);
 	-webkit-transform: scale(1.075, 1.075);
 	transform: scale(1.075, 1.075);
 }
-
 .uni-port {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/portfolio.JPG);
 }
-
 .uni-iOS {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/OandXs.png);
 }
-
 .landing {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/landingpage.jpg);
 }
-
-.landing > .skills {
+/* .landing > .skills {
 	margin-top: -70px;
-}
-
+} */
 .wordpress {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/wordpress.JPG);
 }
-
 .projPort {
-	background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(img/newPortfolio.JPG);
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/newPortfolio.JPG);
 }
-
-.projPort > .skills {
+/* .projPort > .skills {
 	margin-top: -70px;
-}
-
+} */
 .pic {
 	display: flex;
 	flex-flow: column wrap;
 	justify-content: center;
 	align-items: center;
 	height: 250px;
-	border-radius: 5px;
+	border-radius: 10px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	box-shadow: 5px 5px 10px 0 rgb(150, 150, 150);
 	transition: 0.5s;
 }
-
 .pic:hover {
-	-ms-transform: scale(1.1, 1.1);
-	-webkit-transform: scale(1.1, 1.1);
-	transform: scale(1.1, 1.1);
+	-ms-transform: rotate(1deg);
+	-webkit-transform: rotate(1deg);
+	transform: rotate(1deg);
 }
-
-/***********************About**************************/
+/* **********************About************************* */
 .page-about p {
 	font-size: 0.9em;
 }
-
 .page-about .back-img {
 	position: absolute;
 	width: 100%;
@@ -395,42 +390,34 @@ nav li:hover {
 	background-size: cover;
 	background-position: center;
 }
-
 .page-about .back-img h1 {
 	color: white;
 	margin: 0;
 	padding: 90px 0;
 }
-
 .page-about .inner-container {
 	margin-top: 250px;
 	letter-spacing: 1px;
 }
-
 .large-text {
 	font-size: 2.75em;
 	font-weight: bold;
 	letter-spacing: 5px;
 }
-
 .head-line {
 	font-weight: bold;
 }
-
 .about-format {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
-
 .about-format p {
 	text-align: left;
 	align-self: center;
 }
-
 .about-format div {
 	align-self: center;
 }
-
 .skills-img {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -443,7 +430,6 @@ nav li:hover {
 	filter: grayscale(100%);
 	transition: .65s;
 }
-
 .skills-img img:hover {
 	-ms-transform: scale(1.4, 1.4);
 	-webkit-transform: scale(1.4, 1.4);
@@ -451,18 +437,15 @@ nav li:hover {
 	-webkit-filter: grayscale(0%);
 	filter: grayscale(0%);
 }
-
 .page-about a {
 	color: black;
 	text-decoration: none;
 	font-weight: bold;
 }
-
 .page-about a:hover {
 	font-weight: initial;
 }
-
-/***********************Contact**************************/
+/* **********************Contact************************* */
 .page-contact .back-img {
 	position: absolute;
 	width: 100%;
@@ -472,19 +455,16 @@ nav li:hover {
 	background-size: cover;
 	background-position: center;
 }
-
 .page-contact .back-img h1 {
 	color: white;
 	margin: 0;
 	padding: 90px 0;
 }
-
 .page-contact .inner-container {
 	margin-top: 250px;
 	letter-spacing: 1px;
 	font-weight: bold;
 }
-
 .contact-icons {
 	width: 20px;
 	opacity: 0.85;
@@ -497,27 +477,22 @@ nav li:hover {
 	transform: scale(1.4, 1.4);
 	opacity: 1;
 }
-
 .form {
 	padding: 35px 0 0 0;
 	text-align: left;
 	display: inline;
 }
-
 .visible {
 	opacity: 1;
 }
-
 .invisible {
 	opacity: 0;
 }
-
 #nameLbl,
 #emailLbl,
 #messageLbl {
 	transition: 1s;
 }
-
 input[type=text],
 textarea {
 	width: 100%;
@@ -531,11 +506,9 @@ textarea {
 	border-radius: 0;
 	-webkit-appearance: none;
 }
-
 textarea {
 	height: 80px;
 }
-
 input[type=text]:focus {
 	outline: none !important;
 	border-bottom: 3px solid black;
@@ -544,7 +517,6 @@ textarea:focus {
 	outline: none !important;
 	border-bottom: 3px solid black;
 }
-
 input[type=submit] {
 	width: 100%;
 	font-size: 1.25em;
@@ -558,27 +530,22 @@ input[type=submit] {
 	border-radius: 5px;
 	-webkit-appearance: none;
 }
-
 input[type=submit]:hover {
 	background-color: orangered;
 	cursor: pointer;
 }
-
 fieldset {
 	border: none;
 }
-
 form #website {
 	display: none;
 }
-
 #form-messages {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
 }
-
 #new-msg {
 	cursor: pointer;
 	padding: 5px 25px;
@@ -593,7 +560,6 @@ form #website {
 #new-msg:hover {
 	background-color: orangered;
 }
-
 .success {
 	padding: 8em 0;
 	margin: 50px 0;
@@ -605,7 +571,6 @@ form #website {
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
-
 .error {
 	padding: 1em;
 	margin: 1rem 0;
@@ -617,8 +582,7 @@ form #website {
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
-
-/***********************Footer**************************/
+/* **********************Footer************************* */
 footer {
 	display: flex;
 	flex-direction: column;
@@ -628,101 +592,81 @@ footer {
 	background-color: rgb(32, 32, 40);
 	box-shadow: 0 0 20px 0 rgb(150, 150, 150);
 }
-
 .social-footer img {
 	width: 30px;
 	padding: 20px 10px 0 10px;
 	opacity: 0.85;
 	transition: 0.5s;
 }
-
 .social-footer img:hover {
 	opacity: 1;
 	-ms-transform: scale(1.1, 1.1);
 	-webkit-transform: scale(1.1, 1.1);
 	transform: scale(1.1, 1.1);
 }
-
 @media only screen and (max-width: 1200px) {
 	.icon {
 		margin: 0 20px;
 	}
-
 	.icon h1 {
 		font-size: 3em;
 	}
-
 	nav li {
 		padding: 20px;
 		letter-spacing: 3px;
 	}
-
 	.inner-container {
 		width: 85vw;
 	}
-
 	.grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
-
 	.skills-img {
 		margin: 10px;
 	}
 }
-
 @media only screen and (max-width: 992px) {
 	.about-format {
 		grid-template-columns: 1fr;
 	}
-
 	.about-format p {
 		grid-column-start: 1;
 		text-align: center;
 	}
-
 	.about-format h4 {
 		text-align: center;
 	}
-
 	.about-format ul {
 		text-align: center;
 		margin-left: -40px;
 	}
-
 	.skills-img {
 		display: inline;
 	}
 }
-
 @media only screen and (max-width: 768px) {
 	.name {
 		font-size: 4em;
 	}
-
 	.page-home #subTxt {
 		font-size: 1em;
 	}
-
 	.page-home #portfolioBtn:hover {
 		-ms-transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
-
 	.icon:hover {
 		-ms-transform: none;
 		-webkit-transform: none;
 		transform: none;
 	}
-
 	.br {
 		display: inline;
 	}
-
 	nav ul {
 		display: none;
 	}
-
 	.hamburger {
 		display: flex;
 		float: right;
@@ -731,31 +675,25 @@ footer {
 		margin-right: 15px;
 		cursor: pointer;
 	}
-
 	.grid {
 		grid-template-columns: 1fr;
 	}
-
 	.landing > .skills {
 		margin-top: -50px;
 	}
 	.projPort > .skills {
 		margin-top: -50px;
 	}
-
 	.page h1 {
 		letter-spacing: 10px;
 		font-size: 2em;
 	}
-
 	.page p {
 		font-size: .85em;
 	}
-
 	.about-format {
 		grid-template-columns: 1fr;
 	}
-
 	.skills-img {
 		margin: 0;
 	}
@@ -765,23 +703,19 @@ footer {
 		-webkit-filter: grayscale(0%);
 		filter: grayscale(0%);
 	}
-
 	.page-success {
 		font-size: 0.6em;
 	}
 }
-
 @media only screen and (max-width: 380px) {
 	.skills-img img {
 		width: 65px;
 		padding: 10px;
 	}
-
 	.success {
 		padding: 4em 0;
 		margin: 30px 0;
 	}
-
 	#new-msg {
 		font-size: 0.9em;
 	}
