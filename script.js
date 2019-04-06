@@ -220,4 +220,5 @@ messageTxt.addEventListener('focusout', function() {
 
 window.onload = function() {
 	new google.maps.Map(document.getElementById('map'), { zoom: 10, center: { lat: 51.5, lng: -3.2 } });
+	new google.maps.Map(document.getElementById('map2'), { zoom: 9, center: { lat: 51.5, lng: -3.2 } });
 };
