@@ -356,6 +356,9 @@ nav li:hover {
 .projPort {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/newPortfolio.JPG);
 }
+.smartBrain {
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/face.JPG);
+}
 .pic {
 	display: flex;
 	flex-flow: column wrap;
@@ -712,12 +715,7 @@ footer {
 	.grid {
 		grid-template-columns: 1fr;
 	}
-	.landing > .skills {
-		margin-top: -50px;
-	}
-	.projPort > .skills {
-		margin-top: -50px;
-	}
+
 	.page h1 {
 		letter-spacing: 10px;
 		font-size: 2em;
