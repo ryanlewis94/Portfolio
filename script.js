@@ -35,7 +35,7 @@ icon.addEventListener('click', openHome);
 
 //header text rotate\\
 
-let TxtRotate = function(el, toRotate, period) {
+var TxtRotate = function(el, toRotate, period) {
 	this.toRotate = toRotate;
 	this.el = el;
 	this.loopNum = 0;
@@ -46,8 +46,8 @@ let TxtRotate = function(el, toRotate, period) {
 };
 
 TxtRotate.prototype.tick = function() {
-	let i = this.loopNum % this.toRotate.length;
-	let fullTxt = this.toRotate[i];
+	var i = this.loopNum % this.toRotate.length;
+	var fullTxt = this.toRotate[i];
 
 	if (this.isDeleting) {
 		this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -57,8 +57,8 @@ TxtRotate.prototype.tick = function() {
 
 	this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
-	let that = this;
-	let delta = 300 - Math.random() * 100;
+	var that = this;
+	var delta = 300 - Math.random() * 100;
 
 	if (this.isDeleting) {
 		delta /= 2;
@@ -80,10 +80,10 @@ TxtRotate.prototype.tick = function() {
 
 window.onload = function() {
 	setTimeout(function() {
-		let elements = document.getElementsByClassName('txt-rotate');
-		for (let i = 0; i < elements.length; i++) {
-			let toRotate = elements[i].getAttribute('data-rotate');
-			let period = elements[i].getAttribute('data-period');
+		var elements = document.getElementsByClassName('txt-rotate');
+		for (var i = 0; i < elements.length; i++) {
+			var toRotate = elements[i].getAttribute('data-rotate');
+			var period = elements[i].getAttribute('data-period');
 			if (toRotate) {
 				new TxtRotate(elements[i], JSON.parse(toRotate), period);
 			}
