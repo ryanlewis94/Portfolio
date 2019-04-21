@@ -79,16 +79,16 @@ TxtRotate.prototype.tick = function() {
 };
 
 window.onload = function() {
-	setTimeout(function() {
-		var elements = document.getElementsByClassName('txt-rotate');
-		for (var i = 0; i < elements.length; i++) {
-			var toRotate = elements[i].getAttribute('data-rotate');
-			var period = elements[i].getAttribute('data-period');
-			if (toRotate) {
-				new TxtRotate(elements[i], JSON.parse(toRotate), period);
-			}
+	var elements = document.getElementsByClassName('txt-rotate');
+	for (var i = 0; i < elements.length; i++) {
+		var toRotate = elements[i].getAttribute('data-rotate');
+		var period = elements[i].getAttribute('data-period');
+		if (toRotate) {
+			new TxtRotate(elements[i], JSON.parse(toRotate), period);
 		}
-	}, 3000);
+	}
+	new google.maps.Map(document.getElementById('map'), { zoom: 10, center: { lat: 51.5, lng: -3.2 } });
+	new google.maps.Map(document.getElementById('map2'), { zoom: 9, center: { lat: 51.5, lng: -3.2 } });
 };
 
 /////////////////////////Nav Bar\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -217,8 +217,3 @@ messageTxt.addEventListener('focus', function() {
 messageTxt.addEventListener('focusout', function() {
 	check('message', 'unfocus');
 });
-
-window.onload = function() {
-	new google.maps.Map(document.getElementById('map'), { zoom: 10, center: { lat: 51.5, lng: -3.2 } });
-	new google.maps.Map(document.getElementById('map2'), { zoom: 9, center: { lat: 51.5, lng: -3.2 } });
-};
