@@ -42,10 +42,6 @@ body {
 	animation-duration: 3s;
 }
 
-.br {
-	display: none;
-}
-
 .page-home #portfolioBtn {
 	font-weight: 200;
 	color: rgb(255, 255, 255);
@@ -286,6 +282,20 @@ nav li:hover {
 	margin-bottom: 30px;
 }
 
+.more {
+	display: none;
+}
+.readMore {
+	height: 80vh;
+	display: flex;
+}
+.backBtn {
+	text-align: right;
+	font-size: 2.5em;
+	margin: 0;
+	padding: 0;
+}
+
 /***********************Portfolio**************************/
 .page-port p {
 	font-size: 0.85em;
@@ -338,6 +348,7 @@ nav li:hover {
 	-ms-transform: scale(1.075, 1.075);
 	-webkit-transform: scale(1.075, 1.075);
 	transform: scale(1.075, 1.075);
+	cursor: pointer;
 }
 
 .uni-port {
@@ -378,6 +389,15 @@ nav li:hover {
 	-ms-transform: rotate(1deg);
 	-webkit-transform: rotate(1deg);
 	transform: rotate(1deg);
+}
+
+.readMoreBtn {
+	font-weight: bold;
+}
+
+.readMoreBtn:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
 /* **********************About************************* */
 .page-about p {
@@ -700,9 +720,6 @@ footer {
 		-ms-transform: none;
 		-webkit-transform: none;
 		transform: none;
-	}
-	.br {
-		display: inline;
 	}
 	nav ul {
 		display: none;

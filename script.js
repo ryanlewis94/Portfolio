@@ -98,6 +98,9 @@ let portNav = document.getElementById('portBtn');
 let aboutNav = document.getElementById('aboutBtn');
 let conNav = document.getElementById('conBtn');
 
+let readMoreFC = document.getElementById('readMoreBtnFC');
+let moreFC = document.getElementById('moreFC');
+
 let portfolio = document.getElementById('portfolio');
 let about = document.getElementById('about');
 let contact = document.getElementById('contact');
@@ -110,6 +113,7 @@ const removePage = () => {
 	portfolio.style.display = 'none';
 	about.style.display = 'none';
 	contact.style.display = 'none';
+	moreFC.style.display = 'none';
 };
 
 const openPort = () => {
@@ -130,11 +134,18 @@ const openCon = () => {
 	conNav.classList.add('active');
 	contact.style.display = 'inline';
 };
+const openMoreFC = () => {
+	closeNav();
+	removePage();
+	moreFC.style.display = 'inline';
+	moreFC.classList.add('readMore');
+};
 
 homeNav.addEventListener('click', openHome);
 portNav.addEventListener('click', openPort);
 aboutNav.addEventListener('click', openAbout);
 conNav.addEventListener('click', openCon);
+readMoreFC.addEventListener('click', openMoreFC);
 
 /////////////////////////Mobile Nav\\\\\\\\\\\\\\\\\\\\\\\\\
 
