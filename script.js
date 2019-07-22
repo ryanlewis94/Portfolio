@@ -10,7 +10,7 @@ let icon = document.getElementById('icon');
 const closeHome = () => {
 	home.style.height = '0';
 	container.style.display = 'inline';
-	openPort();
+	pageCheck('Port');
 	setTimeout(function() {
 		portfolioBtn.style.display = 'none';
 		subTxt.style.visibility = 'hidden';
@@ -98,9 +98,6 @@ let portNav = document.getElementById('portBtn');
 let aboutNav = document.getElementById('aboutBtn');
 let conNav = document.getElementById('conBtn');
 
-let readMoreFC = document.getElementById('readMoreBtnFC');
-let moreFC = document.getElementById('moreFC');
-
 let portfolio = document.getElementById('portfolio');
 let about = document.getElementById('about');
 let contact = document.getElementById('contact');
@@ -113,39 +110,114 @@ const removePage = () => {
 	portfolio.style.display = 'none';
 	about.style.display = 'none';
 	contact.style.display = 'none';
-	moreFC.style.display = 'none';
+	more.style.display = 'none';
 };
 
-const openPort = () => {
+const pageCheck = (page) => {
 	closeNav();
 	removePage();
-	portNav.classList.add('active');
-	portfolio.style.display = 'inline';
-};
-const openAbout = () => {
-	closeNav();
-	removePage();
-	aboutNav.classList.add('active');
-	about.style.display = 'inline';
-};
-const openCon = () => {
-	closeNav();
-	removePage();
-	conNav.classList.add('active');
-	contact.style.display = 'inline';
-};
-const openMoreFC = () => {
-	closeNav();
-	removePage();
-	moreFC.style.display = 'inline';
-	moreFC.classList.add('readMore');
+	removeMoreSection();
+	switch (page) {
+		case 'Port':
+			portNav.classList.add('active');
+			portfolio.style.display = 'inline';
+			break;
+		case 'About':
+			aboutNav.classList.add('active');
+			about.style.display = 'inline';
+			break;
+		case 'Con':
+			conNav.classList.add('active');
+			contact.style.display = 'inline';
+			break;
+	}
 };
 
-homeNav.addEventListener('click', openHome);
-portNav.addEventListener('click', openPort);
-aboutNav.addEventListener('click', openAbout);
-conNav.addEventListener('click', openCon);
-readMoreFC.addEventListener('click', openMoreFC);
+homeNav.addEventListener('click', function() {
+	openHome();
+});
+portNav.addEventListener('click', function() {
+	pageCheck('Port');
+});
+aboutNav.addEventListener('click', function() {
+	pageCheck('About');
+});
+conNav.addEventListener('click', function() {
+	pageCheck('Con');
+});
+
+/////////////////////////Read More Section\\\\\\\\\\\\\\\\\\\\\\\\\
+
+let readMoreFC = document.getElementById('readMoreBtnFC');
+let readMoreFace = document.getElementById('readMoreBtnFace');
+let readMorePort = document.getElementById('readMoreBtnPort');
+let readMoreWord = document.getElementById('readMoreBtnWord');
+let readMoreIos = document.getElementById('readMoreBtnUniIos');
+let readMoreUniPort = document.getElementById('readMoreBtnUniPort');
+let more = document.getElementById('more');
+
+let FC = document.getElementById('FC');
+let faceApp = document.getElementById('faceApp');
+let projectPort = document.getElementById('projectPort');
+let wordSite = document.getElementById('wordSite');
+let iOS = document.getElementById('iOS');
+let simplePort = document.getElementById('simplePort');
+
+const removeMoreSection = () => {
+	FC.style.display = 'none';
+	faceApp.style.display = 'none';
+	projectPort.style.display = 'none';
+	wordSite.style.display = 'none';
+	iOS.style.display = 'none';
+	simplePort.style.display = 'none';
+};
+
+const projectCheck = (project) => {
+	closeNav();
+	removePage();
+	removeMoreSection();
+	more.style.display = 'inline';
+	more.classList.add('readMore');
+	switch (project) {
+		case 'FC':
+			FC.style.display = 'inline';
+			break;
+		case 'Face':
+			faceApp.style.display = 'inline';
+			break;
+		case 'Port':
+			projectPort.style.display = 'inline';
+			break;
+		case 'Word':
+			wordSite.style.display = 'inline';
+			break;
+		case 'iOS':
+			iOS.style.display = 'inline';
+			break;
+		case 'Uni':
+			simplePort.style.display = 'inline';
+			break;
+	}
+};
+
+readMoreFC.addEventListener('click', function() {
+	projectCheck('FC');
+});
+readMoreFace.addEventListener('click', function() {
+	projectCheck('Face');
+});
+readMorePort.addEventListener('click', function() {
+	projectCheck('Port');
+});
+readMoreWord.addEventListener('click', function() {
+	projectCheck('Word');
+});
+readMoreIos.addEventListener('click', function() {
+	projectCheck('iOS');
+});
+readMoreUniPort.addEventListener('click', function() {
+	projectCheck('Uni');
+});
 
 /////////////////////////Mobile Nav\\\\\\\\\\\\\\\\\\\\\\\\\
 

@@ -282,18 +282,28 @@ nav li:hover {
 	margin-bottom: 30px;
 }
 
-.more {
+.moreSection {
 	display: none;
 }
 .readMore {
 	height: 80vh;
-	display: flex;
+	width: 100vw;
+	text-align: center;
 }
 .backBtn {
-	text-align: right;
 	font-size: 2.5em;
 	margin: 0;
 	padding: 0;
+	margin-left: 44vw;
+	text-decoration: none;
+}
+.backBtn:hover {
+	cursor: pointer;
+	color: rgb(163, 163, 163);
+}
+
+.sectionMore {
+	display: none;
 }
 
 /***********************Portfolio**************************/
@@ -371,7 +381,7 @@ nav li:hover {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/face.JPG);
 }
 .FCApp {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(#);
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/FC.JPG);
 }
 .pic {
 	display: flex;
@@ -505,6 +515,10 @@ nav li:hover {
 	-webkit-transform: scale(1.4, 1.4);
 	transform: scale(1.4, 1.4);
 	opacity: 1;
+}
+
+.br {
+	display: none;
 }
 
 .page .contact-info {
@@ -756,6 +770,14 @@ footer {
 		padding: 15px;
 		-webkit-filter: grayscale(0%);
 		filter: grayscale(0%);
+	}
+
+	.br {
+		display: inline;
+	}
+
+	.backBtn {
+		margin-left: 80vw;
 	}
 }
 

@@ -49,9 +49,9 @@
 		<div id="mySidenav" class="sidenav">
 				<a href="javascript:void(0)" id="mobileCloseBtn" class="closebtn">&times;</a>
 				<a href="#" class="link" onclick="openHome()"><span class="strike">HOME</span></a>
-				<a href="#" class="link" onclick="openPort()"><span class="strike">PORTFOLIO</span></a>
-				<a href="#" class="link" onclick="openAbout()"><span class="strike">ABOUT</span></a>
-				<a href="#" class="link" onclick="openCon()"><span class="strike">CONTACT</span></a>
+				<a href="#" class="link" onclick="pageCheck('Port')"><span class="strike">PORTFOLIO</span></a>
+				<a href="#" class="link" onclick="pageCheck('About')"><span class="strike">ABOUT</span></a>
+				<a href="#" class="link" onclick="pageCheck('Con')"><span class="strike">CONTACT</span></a>
 				<div class="mobile-social">
 					<a href="https://www.instagram.com/Ryan_Lewis1994/" target="_blank"><img src="img/instagram-logo.png" alt="Instagram Link"></a>
 					<a href="https://github.com/ryanlewis94" target="_blank"><img src="img/github-logo.png" alt="Github Link"></a>
@@ -59,9 +59,29 @@
 				</div>
 		</div>
 		<div class="pages">		
-			<div id="moreFC" class="more">
-				<p class="backBtn">&times;</p>
-				<h1>FC App (In Developemnt)</h1>
+			<div id="more" class="moreSection">
+				<a href="#" class="backBtn" onclick="pageCheck('Port')">&times;</a>
+				<div id="FC" class="sectionMore">
+					<h1>FC App (In Developemnt)</h1>
+					<h3>Why?</h3>
+					<p>oshghsogisijfisjgosjgoijd</p>
+				</div>
+				<div id="faceApp" class="sectionMore">
+					<h1>Face Recognition App</h1>
+				</div>
+				<div id="projectPort" class="sectionMore">
+					<h1>Project Portfolio</h1>
+				</div>
+				<div id="wordSite" class="sectionMore">
+					<h1>WordPress Site</h1>
+				</div>
+				<div id="iOS" class="sectionMore">
+					<h1>iOS Game</h1>
+				</div>
+				<div id="simplePort" class="sectionMore">
+					<h1>Simple Portfolio</h1>
+				</div>
+				
 			</div>
 			<!-------------------Portfolio-------------------->
 			<div id="portfolio" class="page-port page">
@@ -85,7 +105,7 @@
 							I am currently working on an app that displays live football scores from an api. Users are then able to select 
 							a game and comment on the game with other users. For future development I am planning on implementing the 
 							watson speech to text api so that users can use the app to commentate on the games or to chat with other users hands free.
-							<span id="readMoreBtnFC" class="readMoreBtn">Read More</span>
+							<span id="readMoreBtnFC" class="readMoreBtn" >Read More</span>
 						</p>
 					</div>
 					<div class="work">
