@@ -187,21 +187,27 @@ const projectCheck = (project) => {
 	switch (project) {
 		case 'FC':
 			FC.style.display = 'inline';
+			selectedProj = 'FC';
 			break;
 		case 'Face':
 			faceApp.style.display = 'inline';
+			selectedProj = 'Face';
 			break;
 		case 'Port':
 			projectPort.style.display = 'inline';
+			selectedProj = 'Port';
 			break;
 		case 'Word':
 			wordSite.style.display = 'inline';
+			selectedProj = 'Word';
 			break;
 		case 'iOS':
 			iOS.style.display = 'inline';
+			selectedProj = 'iOS';
 			break;
 		case 'Uni':
 			simplePort.style.display = 'inline';
+			selectedProj = 'Uni';
 			break;
 	}
 };
@@ -223,6 +229,45 @@ readMoreIos.addEventListener('click', function() {
 });
 readMoreUniPort.addEventListener('click', function() {
 	projectCheck('Uni');
+});
+
+const projects = [ 'FC', 'Face', 'Port', 'Word', 'iOS', 'Uni' ];
+let selectedProj;
+
+let prev = document.getElementById('prev');
+let next = document.getElementById('next');
+
+const prevProj = (proj) => {
+	let i = 0;
+	projects.forEach(function(element) {
+		if (proj === element) {
+			if (i === 0) {
+				i = projects.length;
+			}
+			projectCheck(projects[i - 1]);
+		}
+		i = i + 1;
+	});
+};
+
+const nextProj = (proj) => {
+	let i = 0;
+	projects.forEach(function(element) {
+		if (i + 1 === projects.length) {
+			i = -1;
+		}
+		if (proj === element) {
+			projectCheck(projects[i + 1]);
+		}
+		i = i + 1;
+	});
+};
+
+prev.addEventListener('click', function() {
+	prevProj(selectedProj);
+});
+next.addEventListener('click', function() {
+	nextProj(selectedProj);
 });
 
 /////////////////////////Mobile Nav\\\\\\\\\\\\\\\\\\\\\\\\\

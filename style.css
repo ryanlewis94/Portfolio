@@ -286,9 +286,10 @@ nav li:hover {
 	display: none;
 }
 .readMore {
-	height: 80vh;
+	height: auto;
 	width: 100vw;
 	text-align: center;
+	padding-bottom: 100px;
 }
 .backBtn {
 	font-size: 2.5em;
@@ -296,14 +297,43 @@ nav li:hover {
 	padding: 0;
 	margin-left: 44vw;
 	text-decoration: none;
+	transition: 0.5s;
 }
 .backBtn:hover {
 	cursor: pointer;
 	color: rgb(163, 163, 163);
+	-ms-transform: scale(1.075, 1.075);
+	-webkit-transform: scale(1.075, 1.075);
+	transform: scale(1.075, 1.075);
 }
 
 .sectionMore {
 	display: none;
+}
+
+.readMoreFlex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.projects div p {
+	width: 60vw;
+}
+
+.arrow {
+	font-size: 300%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 25vh;
+	transition: 0.5s;
+}
+.arrow:hover {
+	cursor: pointer;
+	color: rgb(107, 107, 107);
+	-ms-transform: scale(1.075, 1.075);
+	-webkit-transform: scale(1.075, 1.075);
+	transform: scale(1.075, 1.075);
 }
 
 /***********************Portfolio**************************/
