@@ -16,6 +16,10 @@ const closeHome = () => {
 		subTxt.style.visibility = 'hidden';
 		ryan.style.visibility = 'hidden';
 	}, 500);
+	setTimeout(function() {
+		portfolio.classList.remove('animated');
+		portfolio.classList.remove('fadeInUp');
+	}, 2000);
 };
 
 const openHome = () => {
@@ -27,6 +31,8 @@ const openHome = () => {
 	ryan.style.visibility = 'visible';
 	setTimeout(function() {
 		container.style.display = 'none';
+		portfolio.classList.add('animated');
+		portfolio.classList.add('fadeInUp');
 	}, 1000);
 };
 
