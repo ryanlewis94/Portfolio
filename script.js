@@ -154,7 +154,7 @@ conNav.addEventListener('click', function() {
 
 /////////////////////////Read More Section\\\\\\\\\\\\\\\\\\\\\\\\\
 
-let readMoreFC = document.getElementById('readMoreBtnFC');
+let readMoreScores = document.getElementById('readMoreBtnScores');
 let readMoreFace = document.getElementById('readMoreBtnFace');
 let readMorePort = document.getElementById('readMoreBtnPort');
 let readMoreWord = document.getElementById('readMoreBtnWord');
@@ -162,7 +162,7 @@ let readMoreIos = document.getElementById('readMoreBtnUniIos');
 let readMoreUniPort = document.getElementById('readMoreBtnUniPort');
 let more = document.getElementById('more');
 
-let FC = document.getElementById('FC');
+let scoresApp = document.getElementById('scoresApp');
 let faceApp = document.getElementById('faceApp');
 let projectPort = document.getElementById('projectPort');
 let wordSite = document.getElementById('wordSite');
@@ -170,7 +170,7 @@ let iOS = document.getElementById('iOS');
 let simplePort = document.getElementById('simplePort');
 
 const removeMoreSection = () => {
-	FC.style.display = 'none';
+	scoresApp.style.display = 'none';
 	faceApp.style.display = 'none';
 	projectPort.style.display = 'none';
 	wordSite.style.display = 'none';
@@ -185,9 +185,9 @@ const projectCheck = (project) => {
 	more.style.display = 'inline';
 	more.classList.add('readMore');
 	switch (project) {
-		case 'FC':
-			FC.style.display = 'inline';
-			selectedProj = 'FC';
+		case 'Scores':
+			scoresApp.style.display = 'inline';
+			selectedProj = 'Scores';
 			break;
 		case 'Face':
 			faceApp.style.display = 'inline';
@@ -210,10 +210,12 @@ const projectCheck = (project) => {
 			selectedProj = 'Uni';
 			break;
 	}
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
 
-readMoreFC.addEventListener('click', function() {
-	projectCheck('FC');
+readMoreScores.addEventListener('click', function() {
+	projectCheck('Scores');
 });
 readMoreFace.addEventListener('click', function() {
 	projectCheck('Face');
@@ -231,7 +233,7 @@ readMoreUniPort.addEventListener('click', function() {
 	projectCheck('Uni');
 });
 
-const projects = [ 'FC', 'Face', 'Port', 'Word', 'iOS', 'Uni' ];
+const projects = [ 'Scores', 'Face', 'Port', 'Word', 'iOS', 'Uni' ];
 let selectedProj;
 
 let prev = document.getElementById('prev');

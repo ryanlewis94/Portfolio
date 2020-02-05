@@ -295,9 +295,10 @@ nav li:hover {
 	font-size: 2.5em;
 	margin: 0;
 	padding: 0;
-	margin-left: 44vw;
+	margin-left: 80vw;
 	text-decoration: none;
 	transition: 0.5s;
+	color: black;
 }
 .backBtn:hover {
 	cursor: pointer;
@@ -324,16 +325,17 @@ nav li:hover {
 .arrow {
 	font-size: 300%;
 	position: -webkit-sticky;
+	color: rgba(0, 0, 0, 0.5);
 	position: sticky;
-	top: 25vh;
-	transition: 0.5s;
+	top: 50vh;
+	transition: 2.5;
 }
 .arrow:hover {
 	cursor: pointer;
-	color: rgb(107, 107, 107);
-	-ms-transform: scale(1.075, 1.075);
-	-webkit-transform: scale(1.075, 1.075);
-	transform: scale(1.075, 1.075);
+	color: rgba(0, 0, 0, 0.4);
+}
+.arrow:active {
+	color: black;
 }
 
 /***********************Portfolio**************************/
@@ -410,8 +412,8 @@ nav li:hover {
 .smartBrain {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/face.JPG);
 }
-.FCApp {
-	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/FC.JPG);
+.LiveScoresApp {
+	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/Scores.JPG);
 }
 .pic {
 	display: flex;
@@ -425,18 +427,19 @@ nav li:hover {
 	background-position: center;
 	transition: 0.5s;
 }
-.pic:hover {
-	-ms-transform: rotate(1deg);
-	-webkit-transform: rotate(1deg);
-	transform: rotate(1deg);
+.work:hover .pic {
+	-ms-transform: rotate(1.5deg);
+	-webkit-transform: rotate(1.5deg);
+	transform: rotate(1.5deg);
 }
 
 .readMoreBtn {
 	font-weight: bold;
+	transition: 0.5s;
 }
 
 .readMoreBtn:hover {
-	text-decoration: underline;
+	color: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
 }
 /* **********************About************************* */
@@ -806,8 +809,10 @@ footer {
 		display: inline;
 	}
 
-	.backBtn {
-		margin-left: 80vw;
+	.projects div p {
+		width: auto;
+		margin-left: 25px;
+		margin-right: 25px;
 	}
 }
 
