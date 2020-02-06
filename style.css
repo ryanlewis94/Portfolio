@@ -320,6 +320,7 @@ nav li:hover {
 
 .projects div p {
 	width: 60vw;
+	margin: auto;
 }
 
 .arrow {
@@ -336,6 +337,22 @@ nav li:hover {
 }
 .arrow:active {
 	color: black;
+}
+
+.read-more-skills {
+	display: inline;
+}
+.read-more-skills img {
+	width: 50px;
+	margin: 15px;
+	transition: .5s;
+}
+.read-more-skills img:hover {
+	-webkit-filter: grayscale(.4);
+	filter: grayscale(.4);
+	-ms-transform: scale(.95, .95);
+	-webkit-transform: scale(.95, .95);
+	transform: scale(.95, .95);
 }
 
 /***********************Portfolio**************************/
@@ -474,20 +491,17 @@ nav li:hover {
 }
 .format-grid {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr;
 	grid-gap: 25px;
 }
 .format-grid p {
-	text-align: left;
-	align-self: center;
+	text-align: center;
 }
 .format-grid div {
 	align-self: center;
 }
 .skills-img {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin: 0 70px;
+	display: inline;
 }
 .skills-img img {
 	width: 85px;
@@ -726,17 +740,8 @@ footer {
 	.grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	.skills-img {
-		margin: 10px;
-	}
 }
 @media only screen and (max-width: 992px) {
-	.format-grid {
-		grid-template-columns: 1fr;
-	}
-	.format-grid p {
-		margin-bottom: 0;
-	}
 	#map {
 		display: none;
 	}
@@ -745,10 +750,6 @@ footer {
 	}
 	.form {
 		padding: 0;
-	}
-
-	.skills-img {
-		display: inline;
 	}
 }
 @media only screen and (max-width: 768px) {
@@ -795,9 +796,7 @@ footer {
 		font-size: 1.5em;
 		text-align: left;
 	}
-	.skills-img {
-		margin: 0;
-	}
+	
 	.skills-img img {
 		width: 75px;
 		padding: 15px;

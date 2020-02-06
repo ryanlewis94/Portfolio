@@ -64,7 +64,7 @@ TxtRotate.prototype.tick = function() {
 	this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
 
 	var that = this;
-	var delta = 300 - Math.random() * 100;
+	var delta = 350 - Math.random() * 100;
 
 	if (this.isDeleting) {
 		delta /= 2;
@@ -76,7 +76,7 @@ TxtRotate.prototype.tick = function() {
 	} else if (this.isDeleting && this.txt === '') {
 		this.isDeleting = false;
 		this.loopNum++;
-		delta = 500;
+		delta = 750;
 	}
 
 	setTimeout(function() {
@@ -181,6 +181,7 @@ const removeMoreSection = () => {
 const projectCheck = (project) => {
 	closeNav();
 	removePage();
+	portNav.classList.add('active');
 	removeMoreSection();
 	more.style.display = 'inline';
 	more.classList.add('readMore');
