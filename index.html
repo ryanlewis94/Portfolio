@@ -66,16 +66,64 @@
 					<div class="projects">
 						<div id="scoresApp" class="sectionMore">
 							<h1>Football LiveScores App</h1>
-							<h3>Why?</h3>
+							<h3>Why</h3>
+							<p>
+								After obtaining a Software Development role in the NHS, I had to learn a lot to improve my skills with C# and Object Oriented Programming.
+								The team I am in creates desktop applications using WPF and the MVVM pattern. 
+								So in order to learn and improve my skills I decided to start work on this project as I am a big football fan and was very interested in using the 
+								<a href="https://live-score-api.com/">Live Score API</a> which contains football data from multiple countries and competitions, 
+								including past and future matches, league tables, live scores, events and statistics.  
+							</p>
 							<h3>Problems</h3>
+							<p>
+								As this was one of my first times using WPF and xaml it took me some time to understand what could be done with it.
+								And from the start I had a few problems, especially when trying to display data through data bindings.
+							</p>
+							<ul>
+								<li><p>The first was just loading in the list of countries from the API and trying to display them in a Data Grid.</p></li>
+								<li>
+									<p>
+										I had been using a modified Messenger class taken from MVVM Light that is used send data between ViewModels.
+										There was a problem where I was receiving a number that was different to what I was expecting which meant the wrong tab was being displayed.
+									</p>
+								</li>
+								<li>
+									<p>
+										At one point the API got updated so that the leagues part that I was using got deprecated.
+										It was still able to be used, however there were certain games and league tables that were causing errors and weren't able to be displayed.
+									</p>
+								</li>
+							</ul>
 							<h3>Solutions</h3>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-								The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+							<ul>
+								<li>
+									<p>
+										Displaying just the list of countries in a Data Grid was quite difficult in the beginning.
+										I managed to load the data from the API into a list of country objects and after a lot of trial and error and help from StackOverflow,
+										I was able to bind that list to the Data Grid and display it when the application loaded.
+									</p>
+								</li>
+								<li>
+									<p>
+										So this took me a while to figure out what was wrong as it was my first time using a Messenger class and I didn't fully understand how it worked.
+										Anyway in the end it was quite a simple solution, as when triggering the event to change the tab index it was also triggering another event that was also sending a different number.
+										This meant that the tab index was changing to the last number it received. 
+										This was fixed by sending a string instead of a number with more info about where it has come from, 
+										this way when receiving the string I was able to handle it and find out exactly what to do with each message.
+									</p>
+								</li>
+								<li><p>For this problem I had to refactor a lot of my code to account for the updated API which also gave me the chance to make it a little more efficient.</p></li>
+							</ul>
+							<p>
+								As with any project there were many more problems and little bugs that arose. With some debugging and help from my good friend Google hopefully those that arose are now fixed.
+								And for those that are still yet to arise with more use and testing they will be handled and logged so they can be investigated further.
 							</p>
 							<h3>What I Learnt</h3>
 							<p>
-
+								From working on this Project I have learnt a massive amount about C#, OOP the MVVM pattern and how important it is to keep your code loosely coupled
+								so that it may be reused and easier to test. I am still working on this in my spare time and adding little features here and there, 
+								if you would like to use it for yourself you can download the folder from my GitHub <a href="https://github.com/ryanlewis94/C-Football-App/archive/master.zip">here</a>,
+								extract the Zipped file and run the .exe file in the \bin\Debug folder.
 							</p>
 							<div class="read-more-skills">	
 								<img src="img/Skills/csharp.png" alt="C#" title="C#">
@@ -86,16 +134,31 @@
 						</div>
 						<div id="faceApp" class="sectionMore">
 							<h1>Face Recognition App</h1>
-							<h3>Why?</h3>
+							<h3>Why</h3>
+							<p>
+								This was created when I was learning React as part of a Udemy course that I was following. 
+								I enrolled in this course after University as a way to maintain my html and css skills while also going more in depth with JavaScript and some of it's frameworks (React).
+								This was the example project that I followed throughout the course. I also attempted creating my own application which can be found 
+								<a href="http://fc-football-app.herokuapp.com/" target="_blank">here</a>. 
+								It is currently not working, however I do intend to update it in the near future and when I get a fully functioning version it will be up on my portfolio.
+							</p>
 							<h3>Problems</h3>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-								The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+							<p>
+								There were not many problems encountered when creating this web page as it was created based off the Udemy course code.
+								However the main problem I had was utilising the face recognition API as this was my first time interacting with any kind of API's.
 							</p>
 							<h3>Solutions</h3>
+							<p>
+								Utilising the API took me a while to wrap my head around especially an API as complex as this one.
+								Once I had signed up and received the API key the course was very good at helping me gain an understanding of how to consume the API.
+								Without the help of the course it would have taken me a very long time and lot's of trial and error to get this working by myself.
+								Since then I have used multiple other API's, none as complex as this one, however this experience will stand me in good stead for future API usage.
+							</p>
 							<h3>What I Learnt</h3>
 							<p>
-
+								I learnt a lot more about the React framework and how powerful and fast it can be, I definitely would like to use it more in the future and go into more depth.
+								I also improved my general web development knowledge especially in the JavaScript department. 
+								Also learning how to install and use Node and PostgreSQL was a new experience for me which I learnt a lot from.
 							</p>
 							<div class="read-more-skills">	
 								<img src="img/Skills/react.png" alt="React" title="React">
@@ -108,16 +171,34 @@
 						</div>
 						<div id="projectPort" class="sectionMore">
 							<h1>Project Portfolio</h1>
-							<h3>Why?</h3>
+							<h3>Why</h3>
+							<p>
+								About 6-12 months after University and into my job search I decided to create an updated and more professional looking Portfolio with some of the new skills that I had learnt.
+								I wanted to display all of the projects that I had created over the years on a web page that I was proud of and to challenge myself to designing a modern and simplistic UI.
+								Just incase you weren't aware you are currently on this web page and any new projects and applications I create will be uploaded to this site.
+							</p>
 							<h3>Problems</h3>
+							<p>
+								When it comes to Web Design I feel I still have a lot to learn about css. I don't find it quite as easy or as logical as html or JavaScript.
+								As a result designing the UI of the web page took me longer than expected and came with lot's of little problems when trying to display everything exactly where I wanted it to be displayed. <br>
+								The only other significant problem I had was when I was creating the contact form and trying to get it to send the message to my email address.
+							</p>
 							<h3>Solutions</h3>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+							<p>
+								As for the css and the UI I had to do a lot of Googling and trial and error, the W3 Schools website was a very useful tool and a big help.
+								I also found testing after making frequent small changes was much better than making one big change and finding something was broken,
+								it was a lot easier to determine the root cause of the problem when only making a small change, as I find css to be quite temperamental.<br>
+								As for the contact form I managed to use some PHP that I found on StackOverflow and modified, I also included some validation to prevent users from entering redundant or harmful data.
+								I then customized the look and feel of the form so that it was all contained within the web page and matched the rest of the UI design.
+							</p>
+							<p>
 
-								The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 							</p>
 							<h3>What I Learnt</h3>
 							<p>
-
+								As I progressed through this project I learnt more and more about css and the things that you can do with just css alone such as animations and transitions.
+								I also learnt more about JavaScript and in particular ES6 and some it's new features and syntax.
+								And I learnt how to create a fully functional and secure contact form with the use of PHP, jQuery and AJAX.
 							</p>
 							<div class="read-more-skills">
 								<img src="img/Skills/html5.png" alt="HTML" title="HTML">
@@ -130,12 +211,17 @@
 						</div>
 						<div id="wordSite" class="sectionMore">
 							<h1>WordPress Site</h1>
-							<h3>Why?</h3>
-							<h3>Problems</h3>
-							<h3>Solutions</h3>
+							<h3>Why</h3>
+							<p>
+								I wanted to experience using WordPress, so this is another project I took on recently to gain some experience in what it may be like using a CMS such as WordPress.
+								It was only a quick project to find out how WordPress worked and to see what it could do, also with the intention of showcasing some of my other work.
+							</p>
 							<h3>What I Learnt</h3>
 							<p>
-
+								I feel I got a good understanding of how WordPress works and why a lot of businesses choose to use this CMS, 
+								as it can help create web pages much more efficiently with the use of pre-built plugins and templates.
+								I used a lot of different plugins and learnt a bit about SEO and some of the things that have to be done in order to rank higher on Google. 
+								I am definitely interested in using WordPress again in the future and maybe creating some plugins or templates of my own.
 							</p>
 							<div class="read-more-skills">
 								<img src="img/Skills/wordpress.png" alt="WordPress" title="WordPress">
@@ -145,16 +231,30 @@
 						</div>
 						<div id="iOS" class="sectionMore">
 							<h1>iOS Game</h1>
-							<h3>Why?</h3>
-							<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-								The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+							<h3>Why</h3>
+							<p>
+								This iOS application was created as one of my final University projects.
+								We were given the base code for a normal game of noughts and crosses and were tasked with modifying the game and adding more features.
+								I did this by making the grid bigger so the players had to get 4 in a row rather than 3, 
+								adding a 10 second timer so if you run out of time you miss your go 
+								and also there was a quiz in which you have to answer a question correctly in order to take your turn on the board.
 							</p>
 							<h3>Problems</h3>
+							<p>
+								As I am writing this a couple of years after completing, I can't recall all the major problems that occurred.
+								However as with any project there are many problems and bugs that will arise
+								especially as this was the first time I had used swift and XCode.
+							</p>
 							<h3>Solutions</h3>
+							<p>
+								When using a new technology there are times that you need to call a friend (Google) in order to find out how something is done.
+								Google was used a lot throughout this project in order to understand how swift handles things differently compared to other programming languages.
+								And as for any little bugs I like step through my code and debug line by line to see where it may be going wrong before resorting to my call a friend life line.
+							</p>
 							<h3>What I Learnt</h3>
 							<p>
-
+								I learned a lot about mobile application development. 
+								We started off learning a little bit of Objective-C, before moving onto swift which is the language that was used for this application.
 							</p>
 							<div class="read-more-skills">
 								<img src="img/Skills/swift.png" alt="Swift" title="Swift">
@@ -164,15 +264,15 @@
 						</div>
 						<div id="simplePort" class="sectionMore">
 							<h1>Simple Portfolio</h1>
-							<h3>Why?</h3>
+							<h3>Why</h3>
 							<p>
-								After finishing Univeristy I needed a place to display my projects and at the same time maintain and improve my skills that I had learnt.
+								After finishing University I needed a place to display my projects and at the same time maintain and improve my skills that I had learnt.
 								So I started off by using Bootstrap and one of it's free templates as a base for my portfolio, 
 								from there I was able to edit the html and css to have my own look and feel and put my projects on display.
 							</p>
 							<h3>What I Learnt</h3>
 							<p>
-								As I never used Bootstrap before this I learnt alot about it and how useful a tool it can be for building simple good looking websites in a short time.
+								As I never used Bootstrap before this I learnt a lot about it and how useful a tool it can be for building simple good looking websites in a short time.
 								After changing the Bootstrap theme I gained a much better understanding and improved my overall knowledge of html and css.
 							</p>
 							<div class="read-more-skills">	
@@ -203,7 +303,7 @@
 						</div>
 						<p>
 							As Part of my new job I have been using C# a lot more, so I decided to work on this windows application to help improve my knowledge.
-							It get's all of the data from a web api in JSON format and displays it through the app. It allows users to get
+							It gets all of the data from a web api in JSON format and displays it through the app. It allows users to get
 							live updates on the score and live events, see future fixtures by date and stay up to date with the league standings. 
 							<span id="readMoreBtnScores" class="readMoreBtn" >Read More</span>
 						</p>
@@ -260,10 +360,10 @@
 							<a href="https://ryanlewis.co.uk/" target="_blank">View Site</a>
 						</div>
 						<p>
-							I wanted to experience using Wordpress 
-							so this is another project I took on recently to gain some expereience in what it may be like using a CMS such as Wordpress.
+							I wanted to experience using WordPress 
+							so this is another project I took on to gain some experience in what it may be like using a CMS such as WordPress.
 							I also used a lot of different plugins and learnt a bit about SEO and some of the things that have to be done in order to rank higher on Google.
-							I am definitely interested in using Wordpress again and maybe creating some plugins of my own.
+							I am definitely interested in using WordPress again and maybe creating some plugins of my own.
 							<span id="readMoreBtnWord" class="readMoreBtn">Read More</span>
 						</p>
 					</div>
@@ -310,7 +410,7 @@
 						</div>
 						<p>
 							This was the first website that I made after finishing University. 
-							I created a simple single page site using Bootstrap to show off some of the projects I had completed throughout College and Universtiy. 
+							I created a simple single page site using Bootstrap to show off some of the projects I had completed throughout College and University. 
 							<span id="readMoreBtnUniPort" class="readMoreBtn">Read More</span>
 						</p>
 					</div>
@@ -324,7 +424,7 @@
 				<div class="inner-container">
 					<h3 class="large-text">My name is Ryan.</h3>
 					<p class="head-line">
-						I’m a Full Stack Developer currently working for the NHS based in Cardiff with a passion for Web and Mobile Developemnt. 
+						I’m a Full Stack Developer currently working for the NHS based in Cardiff with a passion for Web and Mobile Development. 
 						Eager to create modern, unique, and intuitive systems.
 					</p>
 					<div class="underline animated fadeInUp"></div>
@@ -333,7 +433,7 @@
 							I graduated from the University of South Wales with a Bachelor of Science in Information Systems achieving an upper second class honours.<br><br>
 							As a child I always enjoyed making things and taking things apart while also gravitating towards technology and computers as I got older. 
 							And ever since saving up the money to build my own PC I’ve always wanted to do something with computers. 
-							But it wasn’t until taking Computing class at A-Level that I realised what I enjoyed was programming and using code to create things. 
+							But it wasn’t until taking Computing class at A-Level that I realise what I really enjoyed was programming and using code to create things. 
 							Since then I have learnt a lot through multiple university projects and investing my spare time into bettering my knowledge of different technologies.<br><br>
 							I have included a list some of the languages and technologies that I have gained a really strong understanding of over the last year or two.
 						</p>
