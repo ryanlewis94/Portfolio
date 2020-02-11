@@ -29,6 +29,7 @@ const openHome = () => {
 	portfolioBtn.style.display = 'inline';
 	subTxt.style.visibility = 'visible';
 	ryan.style.visibility = 'visible';
+	document.title = 'Ryan Lewis | Home';
 	setTimeout(function() {
 		container.style.display = 'none';
 		portfolio.classList.add('animated');
@@ -101,19 +102,23 @@ window.onload = function() {
 
 let homeNav = document.getElementById('homeBtn');
 let portNav = document.getElementById('portBtn');
+let blogNav = document.getElementById('blogBtn');
 let aboutNav = document.getElementById('aboutBtn');
 let conNav = document.getElementById('conBtn');
 
 let portfolio = document.getElementById('portfolio');
+let blog = document.getElementById('blog');
 let about = document.getElementById('about');
 let contact = document.getElementById('contact');
 
 const removePage = () => {
 	portNav.classList.remove('active');
+	blogNav.classList.remove('active');
 	aboutNav.classList.remove('active');
 	conNav.classList.remove('active');
 
 	portfolio.style.display = 'none';
+	blog.style.display = 'none';
 	about.style.display = 'none';
 	contact.style.display = 'none';
 	more.style.display = 'none';
@@ -127,14 +132,22 @@ const pageCheck = (page) => {
 		case 'Port':
 			portNav.classList.add('active');
 			portfolio.style.display = 'inline';
+			document.title = 'Ryan Lewis | Portfolio';
+			break;
+		case 'Blog':
+			blogNav.classList.add('active');
+			blog.style.display = 'inline';
+			document.title = 'Ryan Lewis | Blog';
 			break;
 		case 'About':
 			aboutNav.classList.add('active');
 			about.style.display = 'inline';
+			document.title = 'Ryan Lewis | About';
 			break;
 		case 'Con':
 			conNav.classList.add('active');
 			contact.style.display = 'inline';
+			document.title = 'Ryan Lewis | Contact';
 			break;
 	}
 };
@@ -144,6 +157,9 @@ homeNav.addEventListener('click', function() {
 });
 portNav.addEventListener('click', function() {
 	pageCheck('Port');
+});
+blogNav.addEventListener('click', function() {
+	pageCheck('Blog');
 });
 aboutNav.addEventListener('click', function() {
 	pageCheck('About');

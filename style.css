@@ -463,6 +463,36 @@ nav li:hover {
 	color: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
 }
+/* **********************Blog************************* */
+.page-blog .back-img {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/typing.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.page-blog .back-img h1 {
+	color: white;
+	margin: 0;
+	padding: 90px 0;
+}
+.page-blog .inner-container {
+	margin-top: 250px;
+	letter-spacing: 1px;
+}
+.blog-soon {
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+}
+.coming-soon {
+	font-size: 3em;
+	font-weight: bold;
+	letter-spacing: 25px;
+	align-self: center;
+}
 /* **********************About************************* */
 .page-about p {
 	font-size: 0.9em;
@@ -493,15 +523,15 @@ nav li:hover {
 .head-line {
 	font-weight: bold;
 }
-.format-grid {
+.about-grid {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 25px;
 }
-.format-grid p {
+.about-grid p {
 	text-align: center;
 }
-.format-grid div {
+.about-grid div {
 	align-self: center;
 }
 .skills-img {
@@ -548,6 +578,11 @@ nav li:hover {
 	margin-top: 250px;
 	letter-spacing: 1px;
 	font-weight: bold;
+}
+.contact-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 25px;
 }
 .contact-icons {
 	width: 30px;
@@ -755,6 +790,9 @@ footer {
 	.form {
 		padding: 0;
 	}
+	.contact-grid {
+		grid-template-columns: 1fr;
+	}
 }
 @media only screen and (max-width: 768px) {
 	.name {
@@ -817,6 +855,12 @@ footer {
 		margin-left: 25px;
 		margin-right: 25px;
 	}
+
+	.coming-soon {
+		font-size: 2em;
+		font-weight: bold;
+		letter-spacing: 20px;
+	}
 }
 
 @media only screen and (max-width: 380px) {
@@ -826,6 +870,10 @@ footer {
 	}
 	#new-msg {
 		font-size: 0.9em;
+	}
+	.sidenav a {
+		padding: 15px;
+		font-size: 30px;
 	}
 	.arrow {
 		top: 50vh;
