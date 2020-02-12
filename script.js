@@ -2,20 +2,13 @@
 
 let portfolioBtn = document.getElementById('portfolioBtn');
 let home = document.getElementById('home');
-let subTxt = document.getElementById('subTxt');
-let ryan = document.getElementById('ryan');
 let container = document.getElementById('container');
 let icon = document.getElementById('icon');
 
 const closeHome = () => {
-	home.style.height = '0';
+	home.classList.add('page-home-closed')
 	container.style.display = 'inline';
 	pageCheck('Port');
-	setTimeout(function() {
-		portfolioBtn.style.display = 'none';
-		subTxt.style.visibility = 'hidden';
-		ryan.style.visibility = 'hidden';
-	}, 500);
 	setTimeout(function() {
 		portfolio.classList.remove('animated');
 		portfolio.classList.remove('fadeInUp');
@@ -23,17 +16,10 @@ const closeHome = () => {
 };
 
 const openHome = () => {
-	closeNav();
-	home.style.height = '100vh';
-	home.style.visibility = 'visible';
-	portfolioBtn.style.display = 'inline';
-	subTxt.style.visibility = 'visible';
-	ryan.style.visibility = 'visible';
+	home .classList.remove('page-home-closed')
 	document.title = 'Ryan Lewis | Home';
 	setTimeout(function() {
 		container.style.display = 'none';
-		portfolio.classList.add('animated');
-		portfolio.classList.add('fadeInUp');
 	}, 1000);
 };
 
@@ -125,7 +111,6 @@ const removePage = () => {
 };
 
 const pageCheck = (page) => {
-	closeNav();
 	removePage();
 	removeMoreSection();
 	switch (page) {
@@ -195,7 +180,6 @@ const removeMoreSection = () => {
 };
 
 const projectCheck = (project) => {
-	closeNav();
 	removePage();
 	portNav.classList.add('active');
 	removeMoreSection();
@@ -294,19 +278,38 @@ next.addEventListener('click', function() {
 let hamburger = document.getElementById('hamburger');
 let mobileCloseBtn = document.getElementById('mobileCloseBtn');
 let mySidenav = document.getElementById('mySidenav');
+let myMenu = document.querySelector(".menu");
 
-const openNav = () => {
-	mySidenav.style.width = '100%';
-	hamburger.style.opacity = '0';
+function toggleClassMenu() {
+	myMenu.classList.add("menu--animatable");   
+	if(!myMenu.classList.contains("menu--visible")) {       
+		myMenu.classList.add("menu--visible");
+		hamburger.style.opacity = '0';
+	} else {
+		myMenu.classList.remove('menu--visible');
+		hamburger.style.opacity = '1';      
+	}
+}
+
+function OnTransitionEnd() {
+    myMenu.classList.remove("menu--animatable");
+}
+
+const mobileCheck = (page) => {
+	toggleClassMenu()
+	if (page == 'Home') openHome();
+	pageCheck(page);
 };
 
-const closeNav = () => {
-	mySidenav.style.width = '0';
-	hamburger.style.opacity = '1';
-};
-
-hamburger.addEventListener('click', openNav);
-mobileCloseBtn.addEventListener('click', closeNav);
+myMenu.addEventListener('transitionend', function() {
+	OnTransitionEnd();
+});
+hamburger.addEventListener('click', function() {
+	toggleClassMenu();
+});
+mobileCloseBtn.addEventListener('click', function() {
+	toggleClassMenu();
+});
 
 /////////////////////////Form Labels\\\\\\\\\\\\\\\\\\\\\\\\\
 

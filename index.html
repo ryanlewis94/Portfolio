@@ -46,20 +46,22 @@
 				<span id="hamburger" class="hamburger">&#9776;</span>
 			</div>
 		</nav>
-
-		<div id="mySidenav" class="sidenav">
-				<a href="javascript:void(0)" id="mobileCloseBtn" class="closebtn">&times;</a>
-				<a href="#" class="link" onclick="openHome()"><span class="strike">HOME</span></a>
-				<a href="#" class="link" onclick="pageCheck('Port')"><span class="strike">PORTFOLIO</span></a>
-				<a href="#" class="link" onclick="pageCheck('Blog')"><span class="strike">BLOG</span></a>
-				<a href="#" class="link" onclick="pageCheck('About')"><span class="strike">ABOUT</span></a>
-				<a href="#" class="link" onclick="pageCheck('Con')"><span class="strike">CONTACT</span></a>
-				<div class="mobile-social">
-					<a href="https://www.instagram.com/Ryan_Lewis1994/" target="_blank"><img src="img/instagram-logo.png" alt="Instagram Link"></a>
-					<a href="https://github.com/ryanlewis94" target="_blank"><img src="img/github-logo.png" alt="Github Link"></a>
-					<a href="https://www.linkedin.com/in/ryan-lewis-b02105161/" target="_blank"><img src="img/linked-in-logo.png" alt="LinkedIn Link"></a>
-				</div>
+		<div class="menu">
+			<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" id="mobileCloseBtn" class="closebtn">&times;</a>
+					<a href="#" class="link" onclick="mobileCheck('Home')"><span class="strike">HOME</span></a>
+					<a href="#" class="link" onclick="mobileCheck('Port')"><span class="strike">PORTFOLIO</span></a>
+					<a href="#" class="link" onclick="mobileCheck('Blog')"><span class="strike">BLOG</span></a>
+					<a href="#" class="link" onclick="mobileCheck('About')"><span class="strike">ABOUT</span></a>
+					<a href="#" class="link" onclick="mobileCheck('Con')"><span class="strike">CONTACT</span></a>
+					<div class="mobile-social">
+						<a href="https://www.instagram.com/Ryan_Lewis1994/" target="_blank"><img src="img/instagram-logo.png" alt="Instagram Link"></a>
+						<a href="https://github.com/ryanlewis94" target="_blank"><img src="img/github-logo.png" alt="Github Link"></a>
+						<a href="https://www.linkedin.com/in/ryan-lewis-b02105161/" target="_blank"><img src="img/linked-in-logo.png" alt="LinkedIn Link"></a>
+					</div>
+			</div>
 		</div>
+		
 		<div class="pages">		
 			<div id="more" class="moreSection animated fadeInLeft">
 				<a href="#" class="backBtn" onclick="pageCheck('Port')">&times;</a>
@@ -288,7 +290,7 @@
 				</div>
 			</div>
 			<!-------------------Portfolio-------------------->
-			<div id="portfolio" class="page-port page animated fadeInUp">
+			<div id="portfolio" class="page-port page">
 				<h1 class="animated fadeInDown">Portfolio</h1>
 				<div class="underline animated fadeInUp"></div>
 				<div class=" grid inner-container">
