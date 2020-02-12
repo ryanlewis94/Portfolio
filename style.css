@@ -465,7 +465,7 @@ nav li:hover {
 .landing {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/landingpage.jpg);
 }
-.wordpress {
+.wordpress-site {
 	background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/wordpress.JPG);
 }
 .projPort {
@@ -575,19 +575,74 @@ nav li:hover {
 .about-grid div {
 	align-self: center;
 }
-.skills-img {
-	display: inline;
-}
-.skills-img img {
-	width: 85px;
-	padding: 25px;
+.skill-img {
+	background-image: url('img/Skills/skills-sprites.png');
+	background-repeat: no-repeat;
+	background-size: 400px;
+	height: 80px;
+	width: 80px;
+	margin: 30px;
+	overflow: hidden;
+	position: relative;
 	transition: .65s;
 }
-.skills-img img:hover {
+.skill-img:hover {
 	-ms-transform: scale(1.4, 1.4);
 	-webkit-transform: scale(1.4, 1.4);
 	transform: scale(1.4, 1.4);
 }
+.html5 {
+	background-position: -80px -320px;
+}
+.css3 {
+	background-position: -320px -160px;
+}
+.js {
+	background-position: -160px -320px;
+}
+.vs {
+	background-position: -240px 0px;
+}
+.mysql {
+	background-position: 0px -80px;
+}
+.sql {
+	background-position: -80px 0px;
+}
+.react {
+	background-position: -80px -160px;
+}
+.wordpress {
+	background-position: -240px -80px;
+}
+.php {
+	background-position: -160px -80px;
+}
+.csharp {
+	background-position: -320px -80px;
+}
+.xamarin {
+	background-position: 0px -240px;
+}
+.dotnet {
+	background-position: -320px -240px;
+}
+.git {
+	background-position: 0px -320px;
+}
+.node {
+	background-position: -80px -80px;
+}
+.swift {
+	background-position: -160px -160px;
+}
+
+.skills-img {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 .page-about a {
 	color: black;
 	text-decoration: none;
@@ -876,11 +931,6 @@ footer {
 		text-align: left;
 	}
 
-	.skills-img img {
-		width: 75px;
-		padding: 15px;
-	}
-
 	.br {
 		display: inline;
 	}
@@ -896,13 +946,61 @@ footer {
 		font-weight: bold;
 		letter-spacing: 20px;
 	}
+
+	.skill-img {
+		background-size: 320px;
+		height: 64px;
+		width: 64px;
+		margin: 20px;
+	}
+	.html5 {
+		background-position: -64px -256px;
+	}
+	.css3 {
+		background-position: -256px -128px;
+	}
+	.js {
+		background-position: -128px -256px;
+	}
+	.vs {
+		background-position: -192px 0px;
+	}
+	.mysql {
+		background-position: 0px -64px;
+	}
+	.sql {
+		background-position: -64px 0px;
+	}
+	.react {
+		background-position: -64px -128px;
+	}
+	.wordpress {
+		background-position: -192px -64px;
+	}
+	.php {
+		background-position: -128px -64px;
+	}
+	.csharp {
+		background-position: -256px -64px;
+	}
+	.xamarin {
+		background-position: 0px -192px;
+	}
+	.dotnet {
+		background-position: -256px -192px;
+	}
+	.git {
+		background-position: 0px -256px;
+	}
+	.node {
+		background-position: -64px -64px;
+	}
+	.swift {
+		background-position: -128px -128px;
+	}
 }
 
 @media only screen and (max-width: 380px) {
-	.skills-img img {
-		width: 65px;
-		padding: 10px;
-	}
 	#new-msg {
 		font-size: 0.9em;
 	}
@@ -912,5 +1010,8 @@ footer {
 	}
 	.arrow {
 		top: 50vh;
+	}
+	.skill-img {
+		margin: 10px;
 	}
 }
