@@ -385,20 +385,82 @@ nav li:hover {
 	color: black;
 }
 
-.read-more-skills {
-	display: inline;
-}
-.read-more-skills img {
+.more-skill-img {
+	background-image: url('img/Skills/skills-sprite.png');
+	background-repeat: no-repeat;
+	background-size: 250px;
+	height: 50px;
 	width: 50px;
 	margin: 15px;
+	overflow: hidden;
+	position: relative;
 	transition: .5s;
 }
-.read-more-skills img:hover {
+.more-skill-img:hover {
 	-webkit-filter: grayscale(.4);
 	filter: grayscale(.4);
 	-ms-transform: scale(.95, .95);
 	-webkit-transform: scale(.95, .95);
 	transform: scale(.95, .95);
+}
+.more-skill-img.html5 {
+	background-position: -50px -200px;
+}
+.more-skill-img.css3 {
+	background-position: -200px -100px;
+}
+.more-skill-img.js {
+	background-position: -100px -200px;
+}
+.more-skill-img.react {
+	background-position: -50px -100px;
+}
+.more-skill-img.wordpress {
+	background-position: -150px -50px;
+}
+.more-skill-img.php {
+	background-position: -100px -50px;
+}
+.more-skill-img.csharp {
+	background-position: -200px -50px;
+}
+.more-skill-img.dotnet {
+	background-position: -200px -150px;
+}
+.more-skill-img.node {
+	background-position: -50px -50px;
+}
+.more-skill-img.swift {
+	background-position: -100px -100px;
+}
+.more-skill-img.xaml {
+	background-position: -50px -150px;
+}
+.more-skill-img.wpf {
+	background-position: -150px -100px;
+}
+.more-skill-img.postgresql {
+	background-position: 0px -100px;
+}
+.more-skill-img.jquery {
+	background-position: 0px 0px;
+}
+.more-skill-img.ajax {
+	background-position: -150px -150px;
+}
+.more-skill-img.objectivec {
+	background-position: -100px 0px;
+}
+.more-skill-img.xcode {
+	background-position: -100px -150px;
+}
+.more-skill-img.bootstrap {
+	background-position: -200px 0px;
+}
+.read-more-skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 /***********************Portfolio**************************/
@@ -591,49 +653,49 @@ nav li:hover {
 	-webkit-transform: scale(1.4, 1.4);
 	transform: scale(1.4, 1.4);
 }
-.html5 {
+.skill-img.html5 {
 	background-position: -80px -320px;
 }
-.css3 {
+.skill-img.css3 {
 	background-position: -320px -160px;
 }
-.js {
+.skill-img.js {
 	background-position: -160px -320px;
 }
-.vs {
+.skill-img.vs {
 	background-position: -240px 0px;
 }
-.mysql {
+.skill-img.mysql {
 	background-position: 0px -80px;
 }
-.sql {
+.skill-img.sql {
 	background-position: -80px 0px;
 }
-.react {
+.skill-img.react {
 	background-position: -80px -160px;
 }
-.wordpress {
+.skill-img.wordpress {
 	background-position: -240px -80px;
 }
-.php {
+.skill-img.php {
 	background-position: -160px -80px;
 }
-.csharp {
+.skill-img.csharp {
 	background-position: -320px -80px;
 }
-.xamarin {
+.skill-img.xamarin {
 	background-position: 0px -240px;
 }
-.dotnet {
+.skill-img.dotnet {
 	background-position: -320px -240px;
 }
-.git {
+.skill-img.git {
 	background-position: 0px -320px;
 }
-.node {
+.skill-img.node {
 	background-position: -80px -80px;
 }
-.swift {
+.skill-img.swift {
 	background-position: -160px -160px;
 }
 
@@ -953,49 +1015,49 @@ footer {
 		width: 64px;
 		margin: 20px;
 	}
-	.html5 {
+	.skill-img.html5 {
 		background-position: -64px -256px;
 	}
-	.css3 {
+	.skill-img.css3 {
 		background-position: -256px -128px;
 	}
-	.js {
+	.skill-img.js {
 		background-position: -128px -256px;
 	}
-	.vs {
+	.skill-img.vs {
 		background-position: -192px 0px;
 	}
-	.mysql {
+	.skill-img.mysql {
 		background-position: 0px -64px;
 	}
-	.sql {
+	.skill-img.sql {
 		background-position: -64px 0px;
 	}
-	.react {
+	.skill-img.react {
 		background-position: -64px -128px;
 	}
-	.wordpress {
+	.skill-img.wordpress {
 		background-position: -192px -64px;
 	}
-	.php {
+	.skill-img.php {
 		background-position: -128px -64px;
 	}
-	.csharp {
+	.skill-img.csharp {
 		background-position: -256px -64px;
 	}
-	.xamarin {
+	.skill-img.xamarin {
 		background-position: 0px -192px;
 	}
-	.dotnet {
+	.skill-img.dotnet {
 		background-position: -256px -192px;
 	}
-	.git {
+	.skill-img.git {
 		background-position: 0px -256px;
 	}
-	.node {
+	.skill-img.node {
 		background-position: -64px -64px;
 	}
-	.swift {
+	.skill-img.swift {
 		background-position: -128px -128px;
 	}
 }
