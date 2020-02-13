@@ -280,7 +280,7 @@ let mobileCloseBtn = document.getElementById('mobileCloseBtn');
 let mySidenav = document.getElementById('mySidenav');
 let myMenu = document.querySelector(".menu");
 
-function toggleClassMenu() {
+const toggleClassMenu = () => {
 	myMenu.classList.add("menu--animatable");   
 	if(!myMenu.classList.contains("menu--visible")) {       
 		myMenu.classList.add("menu--visible");
@@ -289,11 +289,11 @@ function toggleClassMenu() {
 		myMenu.classList.remove('menu--visible');
 		hamburger.style.opacity = '1';      
 	}
-}
+};
 
-function OnTransitionEnd() {
+const OnTransitionEnd = () => {
     myMenu.classList.remove("menu--animatable");
-}
+};
 
 const mobileCheck = (page) => {
 	toggleClassMenu()
