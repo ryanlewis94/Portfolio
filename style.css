@@ -156,8 +156,8 @@ nav li:hover {
 }
 
 #R {
-	animation-delay: 1s;
-	animation-duration: 1s;
+	animation-delay: .25s;
+	animation-duration: 2s;
 }
 #L {
 	animation-delay: 1s;
