@@ -374,7 +374,7 @@ nav li:hover {
 	position: -webkit-sticky;
 	color: rgba(0, 0, 0, 0.5);
 	position: sticky;
-	top: 325px;
+	top: 35vh;
 	transition: 2.5;
 }
 .arrow:hover {
