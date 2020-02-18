@@ -186,13 +186,12 @@ nav li:hover {
 	top: 0;
 	-webkit-transform: translateX(-100%);
 	transform: translateX(-100%);
-	transition: transform 1s ease-in-out;
+	transition: transform ease-in-out;
 	will-change: transform;
 	background-color: rgb(0, 0, 0);
 	background-color: rgba(0, 0, 0, 0.9);
 	color: white;
 	overflow-x: hidden;
-	transition: 1s;
 	padding-top: 60px;
 	z-index: 9;
 	pointer-events: auto;
@@ -204,11 +203,11 @@ nav li:hover {
 }
 
 .menu--animatable .sidenav {
-	transition: all 1s ease-in-out;
+	transition: all .65s ease-in-out;
 }
 
 .menu--visible.menu--animatable .sidenav {
-	transition: all 1s ease-in-out;
+	transition: all .65s ease-in-out;
 }
 
 .sidenav a {
@@ -262,9 +261,10 @@ nav li:hover {
 .sidenav .closebtn {
 	position: absolute;
 	top: 0;
-	right: 25px;
+	right: 0;
+	padding: 15px 25px;
 	font-size: 36px;
-	margin-left: 50px;
+	cursor: pointer;
 }
 
 .mobile-social {
@@ -953,7 +953,7 @@ footer {
 		font-size: 4em;
 	}
 	.page-home #subTxt {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 	.page-home #portfolioBtn:hover {
 		-ms-transform: none;
@@ -1075,5 +1075,10 @@ footer {
 	}
 	.skill-img {
 		margin: 10px;
+	}
+	.page-home #subTxt {
+		font-weight: 150px;
+		letter-spacing: 2px;
+		font-size: 1em;
 	}
 }
