@@ -424,7 +424,7 @@ nav li:hover {
 .more-skill-img.csharp {
 	background-position: -200px -50px;
 }
-.more-skill-img.dotnet {
+.more-skill-img.dotnetcore {
 	background-position: -200px -150px;
 }
 .more-skill-img.node {
@@ -436,7 +436,7 @@ nav li:hover {
 .more-skill-img.xaml {
 	background-position: -50px -150px;
 }
-.more-skill-img.wpf {
+.more-skill-img.dotnetframework {
 	background-position: -150px -100px;
 }
 .more-skill-img.postgresql {
@@ -686,8 +686,8 @@ nav li:hover {
 .skill-img.xamarin {
 	background-position: 0px -240px;
 }
-.skill-img.dotnet {
-	background-position: -320px -240px;
+.skill-img.dotnetframework {
+	background-position: -240px -160px;
 }
 .skill-img.git {
 	background-position: 0px -320px;
