@@ -1048,8 +1048,8 @@ footer {
 	.skill-img.xamarin {
 		background-position: 0px -192px;
 	}
-	.skill-img.dotnet {
-		background-position: -256px -192px;
+	.skill-img.dotnetframework {
+		background-position: -192px -128px;
 	}
 	.skill-img.git {
 		background-position: 0px -256px;
